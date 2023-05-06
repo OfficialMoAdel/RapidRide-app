@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:taxi_app/screen/car/selectcar.dart';
-import 'package:taxi_app/widgets/coustom_butoon.dart';
+import 'package:taxi_app/widgets/coustom_button.dart';
 
-import '../constants.dart';
+import '../../constants.dart';
 
 // ignore_for_file: prefer_const_constructors
 //google_maps_flutter: ^2.2.5
@@ -47,7 +47,7 @@ class _AddressDirectionPageState extends State<AddressDirectionPage> {
           ),
           SizedBox(height: 16.0),
           ..._buildLocationList(),
-          CoustomButoon(
+          CoustomButton(
               text: "Continue To Order",
               onTap: () => Navigator.push(
                     context,
@@ -55,32 +55,6 @@ class _AddressDirectionPageState extends State<AddressDirectionPage> {
                       builder: (context) => new carselectscreen(),
                     ),
                   )),
-          /* ElevatedButton(
-            onPressed: () {
-              // TODO: navigate to order page
-            },
-            style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all<Color>(PrimaryColor),
-              shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(30),
-                ),
-              ),
-            ),
-            child: Container(
-              padding: EdgeInsets.symmetric(vertical: 15),
-              width: MediaQuery.of(context).size.width * 0.8,
-              child: Text(
-                'Continue To Order',
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: ThirdColor,
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-          ), */
           SizedBox(height: 20),
         ],
       ),

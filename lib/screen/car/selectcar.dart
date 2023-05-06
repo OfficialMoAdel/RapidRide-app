@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:taxi_app/screen/payment_page.dart';
-import '../Textfeild.dart';
+import 'package:taxi_app/widgets/custom-text_filed.dart';
 import '../item_list.dart';
-import '../../widgets/coustom_butoon.dart';
+import '../../widgets/coustom_button.dart';
 
 import '../../constants.dart';
 
@@ -54,27 +54,26 @@ class carselectscreen extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
               SizedBox(
-                height: 100,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    SizedBox(
-                      height: 100,
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                      height: 50,
                       width: MediaQuery.of(context).size.width * 0.8,
-                      child: customTextField(
-                        hinttext: 'Enter Promo code',
-                      ),
+                      child: CustomTextFiled(
+                        hintText: "Enter Promo code",
+                      )),
+                  CircleAvatar(
+                    radius: 15,
+                    backgroundColor: PrimaryColor,
+                    child: Text(
+                      '+',
+                      style: TextStyle(fontSize: 12),
                     ),
-                    CircleAvatar(
-                      radius: 15,
-                      backgroundColor: PrimaryColor,
-                      child: Text(
-                        '+',
-                        style: TextStyle(fontSize: 12),
-                      ),
-                    ),
-                  ],
-                ),
+                  ),
+                ],
               ),
               SizedBox(
                 height: 40,
@@ -107,7 +106,7 @@ class carselectscreen extends StatelessWidget {
                           ),
                         ),
                       ),
-                      CoustomButoon(
+                      CoustomButton(
                         text: 'Continue',
                         onTap: () {
                           Navigator.push(

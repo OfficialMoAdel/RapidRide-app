@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../contact_us_page.dart';
 import '../../notifications.dart';
+import '../../payment_settings.dart';
 import '../editProfile_screen.dart';
 import 'profile_menu.dart';
 import 'profile_pic.dart';
@@ -46,7 +47,10 @@ class Body extends StatelessWidget {
           ProfileMenu(
             text: "Payment",
             icon: "assets/icon/Wallet.svg",
-            press: () {},
+            press: () {
+              Navigator.push(context,
+                  new MaterialPageRoute(builder: (context) => new payment()));
+            },
           ),
           ProfileMenu(
             text: "Help Center",

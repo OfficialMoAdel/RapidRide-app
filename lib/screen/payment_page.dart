@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_app/widgets/coustom_butoon.dart';
+import 'package:taxi_app/widgets/coustom_button.dart';
 
 import '../constants.dart';
 
@@ -34,7 +34,7 @@ class _PaymentPageState extends State<PaymentPage> {
             _buildButton('MasterCard payment', Icons.card_travel),
             _buildButton('Cash Money symbol', Icons.attach_money),
             SizedBox(height: 20),
-            CoustomButoon(
+            CoustomButton(
               text: "Continue",
               onTap: () {
                 Navigator.push(context,

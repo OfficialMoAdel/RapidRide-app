@@ -43,7 +43,7 @@ class _paymentState extends State<payment> {
                     padding: const EdgeInsets.all(8.0),
                     child: Icon(
                       Icons.paypal,
-                      color: Colors.blue,
+                      color: PrimaryColor,
                       size: 35,
                     ),
                   ),
@@ -87,7 +87,7 @@ class _paymentState extends State<payment> {
                     padding: const EdgeInsets.all(8.0),
                     child: Icon(
                       Icons.g_mobiledata,
-                      color: Colors.blue,
+                      color: PrimaryColor,
                       size: 35,
                     ),
                   ),
@@ -131,7 +131,7 @@ class _paymentState extends State<payment> {
                     padding: const EdgeInsets.all(8.0),
                     child: Icon(
                       Icons.apple,
-                      color: ThirdColor,
+                      color: PrimaryColor,
                       size: 35,
                     ),
                   ),
@@ -175,7 +175,7 @@ class _paymentState extends State<payment> {
                     padding: const EdgeInsets.all(8.0),
                     child: Icon(
                       Icons.credit_card,
-                      color: Colors.orange,
+                      color: PrimaryColor,
                       size: 35,
                     ),
                   ),

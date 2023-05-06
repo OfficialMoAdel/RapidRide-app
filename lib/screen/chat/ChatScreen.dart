@@ -18,7 +18,9 @@ class ChatScreen extends StatelessWidget {
           elevation: 0,
           leading: IconButton(
             color: ThirdColor,
-            onPressed: () {},
+            onPressed: () {
+              () => Navigator.of(context).pop();
+            },
             icon: Icon(
               Icons.arrow_back_outlined,
             ),

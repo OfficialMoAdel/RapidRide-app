@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import '../../constants.dart';
-import '../../widgets/coustom_butoon.dart';
+import '../../widgets/coustom_button.dart';
 import '../../widgets/socal_card.dart';
 import 'login_page.dart';
 import 'register_page.dart';
@@ -89,7 +89,7 @@ class LetsIn extends StatelessWidget {
                 const SizedBox(
                   height: 40,
                 ),
-                CoustomButoon(
+                CoustomButton(
                   onTap: () {
                     Navigator.pushNamed(context, LoginPage.id);
                   },

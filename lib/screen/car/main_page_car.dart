@@ -54,7 +54,7 @@ class _MainPagecarState extends State<MainPagecar> {
             label: "Bookings",
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/icon/Message.svg',
+            icon: SvgPicture.asset('assets/icon/Chat.svg',
                 color: _selactedIndex == 2 ? PrimaryColor : ScandryColor),
             label: "Inbox",
           ),

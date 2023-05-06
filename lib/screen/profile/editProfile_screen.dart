@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../constants.dart';
-import '../../widgets/coustom_butoon.dart';
+import '../../widgets/coustom_button.dart';
 import '../../widgets/custom-text_filed.dart';
 
 class EditeProfileScreen extends StatefulWidget {
@@ -113,7 +113,7 @@ class _EditeProfileScreenState extends State<EditeProfileScreen> {
                         }),
                     SizedBox(height: 16.0),
                     Center(
-                      child: CoustomButoon(
+                      child: CoustomButton(
                           text: 'Update',
                           onTap: () {
                             if (_formKey.currentState!.validate()) {

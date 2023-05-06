@@ -1,10 +1,6 @@
-import 'dart:ui';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
+import 'package:taxi_app/screen/bus/AddressDirectionPagebus.dart';
 import '../../constants.dart';
-import '../AddressDirectionPage.dart';
-import '../payment_page.dart';
 
 class BusesPageSelect extends StatelessWidget {
   @override
@@ -14,7 +10,9 @@ class BusesPageSelect extends StatelessWidget {
         backgroundColor: PrimaryColor,
         leading: IconButton(
           color: Colors.white,
-          onPressed: () {},
+          onPressed: () {
+            () => Navigator.of(context).pop();
+          },
           icon: Icon(Icons.arrow_back_outlined),
         ),
         title: Text('Buses'),
@@ -71,7 +69,7 @@ class BusesPageSelect extends StatelessWidget {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => new AddressDirectionPage()));
+                        builder: (context) => new AddressDirectionPageBus()));
               },
               child: Expanded(
                 child: Card(

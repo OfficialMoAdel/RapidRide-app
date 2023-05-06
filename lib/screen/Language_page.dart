@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../constants.dart';
 
@@ -25,7 +26,12 @@ class _HomeState extends State<Home> {
           "Language",
           style: TextStyle(color: ThirdColor),
         ),
-        leading: Icon(Icons.arrow_back, color: ThirdColor),
+        leading: GestureDetector(
+          onTap: () {
+            () => Navigator.of(context).pop();
+          },
+          child: SvgPicture.asset('assets/icon/Arrow - Left.svg'),
+        ), //Icon(Icons.arrow_back, color: ThirdColor),
         backgroundColor: Colors.white,
         elevation: 0,
       ),

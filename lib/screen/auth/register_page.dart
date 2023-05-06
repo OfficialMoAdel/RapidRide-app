@@ -4,7 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import '../../constants.dart';
 import '../../cubit/auth/auth_cubit.dart';
-import '../../widgets/coustom_butoon.dart';
+import '../../widgets/coustom_button.dart';
 import '../../widgets/custom-text_filed.dart';
 import '../../widgets/show_snack_bar.dart';
 import '../../widgets/socal_card.dart';
@@ -91,7 +91,7 @@ class RegisterPage extends StatelessWidget {
                     const SizedBox(
                       height: 40,
                     ),
-                    CoustomButoon(
+                    CoustomButton(
                       onTap: () async {
                         if (formkey.currentState!.validate()) {
                           BlocProvider.of<AuthCubit>(context)

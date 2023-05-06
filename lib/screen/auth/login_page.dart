@@ -6,7 +6,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../constants.dart';
 import '../../cubit/auth/auth_cubit.dart';
-import '../../widgets/coustom_butoon.dart';
+import '../../widgets/coustom_button.dart';
 import '../../widgets/custom-text_filed.dart';
 import '../../widgets/show_snack_bar.dart';
 import '../../widgets/socal_card.dart';
@@ -35,14 +35,6 @@ class LoginPage extends StatelessWidget {
       builder: (context, state) => ModalProgressHUD(
         inAsyncCall: isloding,
         child: Scaffold(
-          // appBar: AppBar(
-          //   leading: IconButton(
-          //     icon: Icon(Icons.arrow_back, color: ktherdColor),
-          //     onPressed: () => Navigator.of(context).pop(),
-          //   ),
-          //   backgroundColor: Colors.transparent,
-          //   elevation: 0.0,
-          // ),
           body: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
             child: Form(
@@ -105,7 +97,7 @@ class LoginPage extends StatelessWidget {
                   const SizedBox(
                     height: 40,
                   ),
-                  CoustomButoon(
+                  CoustomButton(
                     onTap: () async {
                       final SharedPreferences sharedPreferences =
                           await SharedPreferences.getInstance();

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:taxi_app/widgets/coustom_butoon.dart';
+import 'package:taxi_app/widgets/coustom_button.dart';
 import '../../constants.dart';
 import '../../widgets/custom-text_filed.dart';
-import '../AddressDirectionPage.dart';
+import 'AddressDirectionPage.dart';
 
 class HomepageCar extends StatefulWidget {
   const HomepageCar({super.key});
@@ -91,7 +91,7 @@ class _HomepageCarState extends State<HomepageCar> {
                         title: CustomTextFiled(
                           hintText: 'Destination',
                         )),
-                    CoustomButoon(
+                    CoustomButton(
                       text: 'Search',
                       onTap: () {
                         Navigator.push(

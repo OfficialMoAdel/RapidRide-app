@@ -3,7 +3,6 @@ import 'package:flutter_svg/svg.dart';
 
 import '../../constants.dart';
 import '../booking_page.dart';
-import '../chat/ChatsScreen.dart';
 import '../chat/inbox_Page.dart';
 import '../profile/profile_screen.dart';
 import '../wallet/wallet_page.dart';
@@ -22,7 +21,7 @@ class _MainPageBusState extends State<MainPageBus> {
   List<Widget> _WigetOptions = <Widget>[
     HomePageBus(),
     BookingPage(),
-    ChatsScreen(),
+    InboxPage(),
     WalletScreen(),
     ProfileScreen(),
   ];
@@ -54,7 +53,7 @@ class _MainPageBusState extends State<MainPageBus> {
             label: "Bookings",
           ),
           BottomNavigationBarItem(
-            icon: SvgPicture.asset('assets/icon/Message.svg',
+            icon: SvgPicture.asset('assets/icon/Chat.svg',
                 color: _selactedIndex == 2 ? PrimaryColor : ScandryColor),
             label: "Inbox",
           ),

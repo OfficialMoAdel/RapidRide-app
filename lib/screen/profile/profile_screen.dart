@@ -10,10 +10,7 @@ class ProfileScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80,
-        /*  leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: ktherdColor),
-          onPressed: () => Navigator.of(context).pop(),
-        ), */
+        //
         title: Text(
           "Profile",
           textAlign: TextAlign.center,

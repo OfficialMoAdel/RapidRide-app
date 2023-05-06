@@ -1,5 +1,6 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:taxi_app/screen/wallet/TopUP_Wallet.dart';
 import 'package:taxi_app/screen/wallet/transaction.dart';
 
 import '../../constants.dart';
@@ -103,7 +104,14 @@ class WalletScreen extends StatelessWidget {
                         //  Spacer(),
                         Container(
                           child: ElevatedButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              Navigator.push(
+                                context,
+                                new MaterialPageRoute(
+                                  builder: (context) => new TopUpWallet(),
+                                ),
+                              );
+                            },
                             style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.white,
                                 // shape: MaterialStateProperty.all()

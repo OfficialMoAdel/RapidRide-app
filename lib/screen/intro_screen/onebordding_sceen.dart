@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
-import '../../widgets/coustom_butoon.dart';
+import '../../widgets/coustom_button.dart';
 import '../../widgets/intro_page.dart';
 import '../auth/login_page.dart';
 
@@ -94,7 +94,7 @@ class _onBordingScreenState extends State<onBordingScreen> {
                               return LoginPage();
                             }));
                           },
-                          child: CoustomButoon(text: 'done'),
+                          child: CoustomButton(text: 'done'),
                         )
                       : GestureDetector(
                           onTap: () {
@@ -103,7 +103,7 @@ class _onBordingScreenState extends State<onBordingScreen> {
                               curve: Curves.easeIn,
                             );
                           },
-                          child: CoustomButoon(text: 'next'),
+                          child: CoustomButton(text: 'next'),
                         ),
                 ),
                 SizedBox(

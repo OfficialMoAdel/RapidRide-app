@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'bus/main_page_bus.dart';
 import 'car/main_page_car.dart';
-import '../widgets/coustom_butoon.dart';
+import '../widgets/coustom_button.dart';
 import '../constants.dart';
 
 class MianApp extends StatelessWidget {
@@ -27,7 +27,7 @@ class MianApp extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              CoustomButoon(
+              CoustomButton(
                 text: 'Car',
                 onTap: () => {
                   Navigator.push(
@@ -38,7 +38,7 @@ class MianApp extends StatelessWidget {
                   )
                 },
               ),
-              CoustomButoon(
+              CoustomButton(
                 text: 'Bus',
                 onTap: () => {
                   Navigator.push(
@@ -49,7 +49,7 @@ class MianApp extends StatelessWidget {
                   )
                 },
               ),
-              CoustomButoon(
+              CoustomButton(
                 text: 'MicroBus',
                 onTap: () => {
                   /* Navigator.push(
@@ -59,7 +59,18 @@ class MianApp extends StatelessWidget {
                     ),
                   ) */
                 },
-              )
+              ),
+              /* CoustomButton(
+                text: 'MicroBus',
+                onTap: () => {
+                  /* Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                      builder: (context) => new MainPageBus(),
+                    ),
+                  ) */
+                },
+              ) */
             ],
           ),
         ),

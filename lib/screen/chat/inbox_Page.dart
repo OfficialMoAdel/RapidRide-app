@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taxi_app/screen/chat/ChatsScreen.dart';
 import 'CallsScreen.dart';
 import 'ChatScreen.dart';
 import '../../constants.dart';
@@ -66,7 +67,7 @@ class _InboxPageState extends State<InboxPage>
           padding: const EdgeInsets.all(16.0),
           child: TabBarView(
             children: [
-              ChatScreen(),
+              ChatsScreen(),
               CallsScreen(),
             ],
           ),
