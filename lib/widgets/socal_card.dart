@@ -23,7 +23,7 @@ class SocalCard extends StatelessWidget {
         margin: EdgeInsets.symmetric(horizontal: 10),
         padding: EdgeInsets.all((12)),
         decoration: BoxDecoration(
-          border: Border.all(color: kScandryColor.withOpacity(.3)),
+          border: Border.all(color: ScandryColor.withOpacity(.3)),
           borderRadius: BorderRadius.circular(16),
         ),
         child: SvgPicture.asset(
@@ -56,7 +56,7 @@ class SocalCard1 extends StatelessWidget {
         margin: EdgeInsets.symmetric(horizontal: 10),
         padding: EdgeInsets.all((12)),
         decoration: BoxDecoration(
-          border: Border.all(color: kScandryColor.withOpacity(.3)),
+          border: Border.all(color: ScandryColor.withOpacity(.3)),
           borderRadius: BorderRadius.circular(16),
         ),
         child: Row(

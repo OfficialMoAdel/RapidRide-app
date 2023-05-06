@@ -29,12 +29,12 @@ class _EditeProfileScreenState extends State<EditeProfileScreen> {
         appBar: AppBar(
           toolbarHeight: 80,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: ktherdColor),
+            icon: Icon(Icons.arrow_back, color: ThirdColor),
             onPressed: () => Navigator.of(context).pop(),
           ),
           title: Text(
             "Edite Profile",
-            style: TextStyle(color: ktherdColor),
+            style: TextStyle(color: ThirdColor),
           ),
           backgroundColor: Colors.transparent,
           elevation: 0.0,

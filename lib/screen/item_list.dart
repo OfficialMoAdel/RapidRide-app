@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taxi_app/constants.dart';
 
 itemList() {
   return Container(
@@ -7,6 +8,7 @@ itemList() {
       children: [
         CircleAvatar(
           child: Icon(Icons.person),
+          backgroundColor: PrimaryColor,
         ),
         SizedBox(width: 16.0),
         Expanded(
@@ -49,7 +51,7 @@ itemList() {
               color: Colors.grey,
               width: 2.0,
             ),
-            color: true ? Colors.blue : Colors.transparent,
+            color: true ? PrimaryColor : Colors.transparent,
           ),
           child: GestureDetector(
               onTap: () {},

@@ -17,7 +17,7 @@ class ProfileScreen extends StatelessWidget {
         title: Text(
           "Profile",
           textAlign: TextAlign.center,
-          style: TextStyle(color: ktherdColor),
+          style: TextStyle(color: ThirdColor),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0.0,

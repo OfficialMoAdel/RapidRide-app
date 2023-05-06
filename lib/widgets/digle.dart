@@ -37,7 +37,7 @@ showDialogFunc(context, img, title, desc) {
                   title!,
                   style: TextStyle(
                     fontSize: 25,
-                    color: kScandryColor,
+                    color: ScandryColor,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
@@ -51,7 +51,7 @@ showDialogFunc(context, img, title, desc) {
                     child: Text(
                       desc!,
                       maxLines: 3,
-                      style: TextStyle(fontSize: 15, color: kScandryColor),
+                      style: TextStyle(fontSize: 15, color: ScandryColor),
                       textAlign: TextAlign.center,
                     ),
                   ),

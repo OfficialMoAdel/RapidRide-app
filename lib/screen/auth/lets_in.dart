@@ -34,7 +34,7 @@ class LetsIn extends StatelessWidget {
                   'Lets you in',
                   style: TextStyle(
                     fontWeight: FontWeight.w600,
-                    color: ktherdColor,
+                    color: ThirdColor,
                     fontSize: 46,
                   ),
                 ),
@@ -103,7 +103,7 @@ class LetsIn extends StatelessWidget {
                   children: [
                     Text(
                       "Already have an account?",
-                      style: TextStyle(color: kScandryColor),
+                      style: TextStyle(color: ScandryColor),
                     ),
                     GestureDetector(
                       onTap: () {
@@ -111,7 +111,7 @@ class LetsIn extends StatelessWidget {
                       },
                       child: Text(
                         ' Sign Up',
-                        style: TextStyle(color: kPrimaryColor),
+                        style: TextStyle(color: PrimaryColor),
                       ),
                     )
                   ],

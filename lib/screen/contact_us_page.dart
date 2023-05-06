@@ -11,7 +11,7 @@ class ContactUsPage extends StatelessWidget {
       appBar: AppBar(
         title: Text('Contact Us'),
         centerTitle: true,
-        backgroundColor: ktherdColor,
+        backgroundColor: ThirdColor,
       ),
       body: Center(
         child: Column(
@@ -43,7 +43,7 @@ class ContactUsPage extends StatelessWidget {
         label: Text(title, style: TextStyle(fontSize: 18)),
         onPressed: () {},
         style: ElevatedButton.styleFrom(
-          backgroundColor: ktherdColor,
+          backgroundColor: ThirdColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(30),
           ),

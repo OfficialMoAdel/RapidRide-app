@@ -59,7 +59,7 @@ class LoginPage extends StatelessWidget {
                         'Login to you \nAccount',
                         style: TextStyle(
                           fontWeight: FontWeight.bold,
-                          color: ktherdColor,
+                          color: ThirdColor,
                           fontSize: 46,
                         ),
                       ),
@@ -97,7 +97,7 @@ class LoginPage extends StatelessWidget {
                     child: Text(
                       'Forgot the password?',
                       style: TextStyle(
-                          color: kPrimaryColor,
+                          color: PrimaryColor,
                           fontSize: 16,
                           fontWeight: FontWeight.w600),
                     ),
@@ -164,7 +164,7 @@ class LoginPage extends StatelessWidget {
                     children: [
                       Text(
                         "Don't have an account ?",
-                        style: TextStyle(color: kScandryColor),
+                        style: TextStyle(color: ScandryColor),
                       ),
                       GestureDetector(
                         onTap: () {
@@ -172,7 +172,7 @@ class LoginPage extends StatelessWidget {
                         },
                         child: Text(
                           ' Sign up',
-                          style: TextStyle(color: kPrimaryColor),
+                          style: TextStyle(color: PrimaryColor),
                         ),
                       )
                     ],

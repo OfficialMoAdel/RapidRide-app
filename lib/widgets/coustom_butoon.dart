@@ -12,7 +12,7 @@ class CoustomButoon extends StatelessWidget {
       onTap: onTap,
       child: Container(
         decoration: BoxDecoration(
-          color: kPrimaryColor,
+          color: PrimaryColor,
           borderRadius: BorderRadius.circular(32),
         ),
         width: double.infinity,

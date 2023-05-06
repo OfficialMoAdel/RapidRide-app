@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taxi_app/widgets/coustom_butoon.dart';
 
 import '../constants.dart';
 
@@ -14,8 +15,12 @@ class _PaymentPageState extends State<PaymentPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Payment'),
-        backgroundColor: Colors.blue,
+        title: Text(
+          'Payment',
+          style: TextStyle(color: ThirdColor),
+        ),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
       ),
       body: Container(
         color: Colors.white,
@@ -29,21 +34,13 @@ class _PaymentPageState extends State<PaymentPage> {
             _buildButton('MasterCard payment', Icons.card_travel),
             _buildButton('Cash Money symbol', Icons.attach_money),
             SizedBox(height: 20),
-            ElevatedButton(
-              onPressed: () {
-                //TODO: Add functionality for Continue button
+            CoustomButoon(
+              text: "Continue",
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => new PaymentPage()));
               },
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Colors.blue,
-              ),
-              child: Text(
-                'Continue',
-                style: TextStyle(
-                  color: ktherdColor,
-                  fontSize: 18,
-                ),
-              ),
-            ),
+            )
           ],
         ),
       ),
@@ -52,23 +49,23 @@ class _PaymentPageState extends State<PaymentPage> {
 
   Widget _buildButton(String text, IconData icon) {
     return Container(
+      //padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: ElevatedButton.icon(
         onPressed: () {
           //TODO: Add functionality for the payment button
         },
         style: ElevatedButton.styleFrom(
-          backgroundColor: ktherdColor,
+          backgroundColor: Colors.white,
         ),
         icon: Icon(
           icon,
           size: 24,
+          color: PrimaryColor,
         ),
         label: Text(
           text,
-          style: TextStyle(
-            fontSize: 18,
-          ),
+          style: TextStyle(fontSize: 18, color: ThirdColor),
         ),
       ),
     );

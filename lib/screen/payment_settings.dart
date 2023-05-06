@@ -16,8 +16,8 @@ class _paymentState extends State<payment> {
       home: Scaffold(
         appBar: AppBar(
           elevation: 0,
-          title: Text('Payment', style: TextStyle(color: ktherdColor)),
-          leading: Icon(Icons.arrow_back, color: ktherdColor),
+          title: Text('Payment', style: TextStyle(color: ThirdColor)),
+          leading: Icon(Icons.arrow_back, color: ThirdColor),
           backgroundColor: Colors.transparent,
         ),
         body: Column(children: [
@@ -30,7 +30,7 @@ class _paymentState extends State<payment> {
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
-                    color: kScandryColor.withOpacity(0.07),
+                    color: ScandryColor.withOpacity(0.07),
                     spreadRadius: 0,
                     blurRadius: 20,
                     offset: Offset(0, 3), // changes position of shadow
@@ -58,7 +58,7 @@ class _paymentState extends State<payment> {
                     'Connect',
                     style: TextStyle(
                         fontSize: 17,
-                        color: kPrimaryColor,
+                        color: PrimaryColor,
                         fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -74,7 +74,7 @@ class _paymentState extends State<payment> {
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
-                    color: kScandryColor.withOpacity(0.07),
+                    color: ScandryColor.withOpacity(0.07),
                     spreadRadius: 0,
                     blurRadius: 20,
                     offset: Offset(0, 3), // changes position of shadow
@@ -102,7 +102,7 @@ class _paymentState extends State<payment> {
                     'Connect',
                     style: TextStyle(
                         fontSize: 17,
-                        color: kPrimaryColor,
+                        color: PrimaryColor,
                         fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -118,7 +118,7 @@ class _paymentState extends State<payment> {
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
-                    color: kScandryColor.withOpacity(0.07),
+                    color: ScandryColor.withOpacity(0.07),
                     spreadRadius: 0,
                     blurRadius: 20,
                     offset: Offset(0, 3), // changes position of shadow
@@ -131,7 +131,7 @@ class _paymentState extends State<payment> {
                     padding: const EdgeInsets.all(8.0),
                     child: Icon(
                       Icons.apple,
-                      color: ktherdColor,
+                      color: ThirdColor,
                       size: 35,
                     ),
                   ),
@@ -146,7 +146,7 @@ class _paymentState extends State<payment> {
                     'Connect',
                     style: TextStyle(
                         fontSize: 17,
-                        color: kPrimaryColor,
+                        color: PrimaryColor,
                         fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -162,7 +162,7 @@ class _paymentState extends State<payment> {
                 borderRadius: BorderRadius.circular(10),
                 boxShadow: [
                   BoxShadow(
-                    color: kScandryColor.withOpacity(0.07),
+                    color: ScandryColor.withOpacity(0.07),
                     spreadRadius: 0,
                     blurRadius: 20,
                     offset: Offset(0, 3), // changes position of shadow
@@ -190,7 +190,7 @@ class _paymentState extends State<payment> {
                     'Connect',
                     style: TextStyle(
                         fontSize: 17,
-                        color: kPrimaryColor,
+                        color: PrimaryColor,
                         fontWeight: FontWeight.bold),
                   ),
                 ],
@@ -209,11 +209,11 @@ class _paymentState extends State<payment> {
                 height: 50,
                 width: 330,
                 decoration: BoxDecoration(
-                  color: kPrimaryColor,
+                  color: PrimaryColor,
                   borderRadius: BorderRadius.circular(30),
                   boxShadow: [
                     BoxShadow(
-                      color: kScandryColor.withOpacity(0.07),
+                      color: ScandryColor.withOpacity(0.07),
                       spreadRadius: 0,
                       blurRadius: 20,
                       offset: Offset(0, 3), // changes position of shadow

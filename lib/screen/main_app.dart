@@ -16,7 +16,7 @@ class MianApp extends StatelessWidget {
         title: Text(
           "Choose of transportation",
           textAlign: TextAlign.center,
-          style: TextStyle(color: ktherdColor),
+          style: TextStyle(color: ThirdColor),
         ),
         backgroundColor: Colors.transparent,
         elevation: 0.0,

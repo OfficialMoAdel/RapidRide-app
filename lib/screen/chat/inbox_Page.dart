@@ -30,18 +30,18 @@ class _InboxPageState extends State<InboxPage>
           title: Text(
             'Inbox',
             style: TextStyle(
-                color: ktherdColor, fontWeight: FontWeight.w500, fontSize: 21),
+                color: ThirdColor, fontWeight: FontWeight.w500, fontSize: 21),
           ),
           actions: [
             IconButton(
               onPressed: () {},
               icon: Icon(Icons.search),
-              color: ktherdColor,
+              color: ThirdColor,
             ),
             IconButton(
               onPressed: () {},
               icon: Icon(Icons.menu),
-              color: ktherdColor,
+              color: ThirdColor,
             ),
           ],
           bottom: TabBar(

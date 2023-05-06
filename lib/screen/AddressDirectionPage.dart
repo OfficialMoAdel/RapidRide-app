@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:taxi_app/screen/car/selectcar.dart';
+import 'package:taxi_app/widgets/coustom_butoon.dart';
 
 import '../constants.dart';
 
@@ -25,12 +27,12 @@ class _AddressDirectionPageState extends State<AddressDirectionPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          toolbarHeight: 100,
+          toolbarHeight: 80,
           title: Text('Address Direction'),
           centerTitle: true,
           titleTextStyle: TextStyle(
-              fontSize: 20.0, fontWeight: FontWeight.bold, color: ktherdColor),
-          backgroundColor: kPrimaryColor),
+              fontSize: 20.0, fontWeight: FontWeight.bold, color: ThirdColor),
+          backgroundColor: PrimaryColor),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -45,12 +47,20 @@ class _AddressDirectionPageState extends State<AddressDirectionPage> {
           ),
           SizedBox(height: 16.0),
           ..._buildLocationList(),
-          ElevatedButton(
+          CoustomButoon(
+              text: "Continue To Order",
+              onTap: () => Navigator.push(
+                    context,
+                    new MaterialPageRoute(
+                      builder: (context) => new carselectscreen(),
+                    ),
+                  )),
+          /* ElevatedButton(
             onPressed: () {
               // TODO: navigate to order page
             },
             style: ButtonStyle(
-              backgroundColor: MaterialStateProperty.all<Color>(kPrimaryColor),
+              backgroundColor: MaterialStateProperty.all<Color>(PrimaryColor),
               shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                 RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(30),
@@ -64,13 +74,13 @@ class _AddressDirectionPageState extends State<AddressDirectionPage> {
                 'Continue To Order',
                 textAlign: TextAlign.center,
                 style: TextStyle(
-                  color: ktherdColor,
+                  color: ThirdColor,
                   fontSize: 18,
                   fontWeight: FontWeight.bold,
                 ),
               ),
             ),
-          ),
+          ), */
           SizedBox(height: 20),
         ],
       ),
@@ -102,7 +112,7 @@ class _AddressDirectionPageState extends State<AddressDirectionPage> {
               SizedBox(height: 8.0),
               Text(
                 _titles[i],
-                style: TextStyle(fontSize: 14.0, color: kScandryColor),
+                style: TextStyle(fontSize: 14.0, color: ScandryColor),
               ),
               SizedBox(height: 8.0),
               Divider(),

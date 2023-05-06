@@ -74,7 +74,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w400,
-                                      color: ktherdColor),
+                                      color: ThirdColor),
                                 ),
                               ),
                             ],
@@ -131,7 +131,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w400,
-                                      color: ktherdColor),
+                                      color: ThirdColor),
                                 ),
                               ),
                             ],
@@ -188,7 +188,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w400,
-                                      color: ktherdColor),
+                                      color: ThirdColor),
                                 ),
                               ),
                             ],
@@ -245,7 +245,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w400,
-                                      color: ktherdColor),
+                                      color: ThirdColor),
                                 ),
                               ),
                             ],
@@ -302,7 +302,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w400,
-                                      color: ktherdColor),
+                                      color: ThirdColor),
                                 ),
                               ),
                             ],
@@ -359,7 +359,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w400,
-                                      color: ktherdColor),
+                                      color: ThirdColor),
                                 ),
                               ),
                             ],
@@ -416,7 +416,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w400,
-                                      color: ktherdColor),
+                                      color: ThirdColor),
                                 ),
                               ),
                             ],
@@ -473,7 +473,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                                   style: TextStyle(
                                       fontSize: 13,
                                       fontWeight: FontWeight.w400,
-                                      color: ktherdColor),
+                                      color: ThirdColor),
                                 ),
                               ),
                             ],

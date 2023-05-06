@@ -27,12 +27,12 @@ class _NotificationsPageState extends State<NotificationsPage> {
         appBar: AppBar(
           toolbarHeight: 70,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: ktherdColor),
+            icon: Icon(Icons.arrow_back, color: ThirdColor),
             onPressed: () => Navigator.of(context).pop(),
           ),
           title: Text(
             "Notifications",
-            style: TextStyle(color: ktherdColor),
+            style: TextStyle(color: ThirdColor),
           ),
           backgroundColor: Colors.transparent,
           elevation: 0.0,
@@ -114,12 +114,12 @@ class _NotificationsPageState extends State<NotificationsPage> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          Text(title, style: TextStyle(color: ktherdColor)),
+          Text(title, style: TextStyle(color: ThirdColor)),
           Switch(
             value: value,
             onChanged: onChanged,
-            activeColor: kPrimaryColor,
-            inactiveTrackColor: kScandryColor,
+            activeColor: PrimaryColor,
+            inactiveTrackColor: ScandryColor,
           ),
         ],
       ),

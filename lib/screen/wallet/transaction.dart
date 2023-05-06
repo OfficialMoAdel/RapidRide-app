@@ -23,12 +23,12 @@ class Transaction extends StatelessWidget {
                 onPressed: () {},
                 icon: Icon(
                   Icons.arrow_back_outlined,
-                  color: ktherdColor,
+                  color: ThirdColor,
                 ),
               ),
               Text(
                 'Transaction History',
-                style: TextStyle(color: ktherdColor),
+                style: TextStyle(color: ThirdColor),
               )
             ],
           ),
@@ -37,7 +37,7 @@ class Transaction extends StatelessWidget {
               onPressed: () {},
               icon: Icon(
                 Icons.search_sharp,
-                color: ktherdColor,
+                color: ThirdColor,
               ),
             ),
           ],

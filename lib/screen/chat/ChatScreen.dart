@@ -17,7 +17,7 @@ class ChatScreen extends StatelessWidget {
           backgroundColor: Colors.white,
           elevation: 0,
           leading: IconButton(
-            color: ktherdColor,
+            color: ThirdColor,
             onPressed: () {},
             icon: Icon(
               Icons.arrow_back_outlined,
@@ -25,18 +25,18 @@ class ChatScreen extends StatelessWidget {
           ),
           title: Text(
             'Sara',
-            style: TextStyle(color: ktherdColor, fontSize: 22),
+            style: TextStyle(color: ThirdColor, fontSize: 22),
           ),
           actions: [
             IconButton(
-              color: ktherdColor,
+              color: ThirdColor,
               icon: Icon(Icons.phone_outlined),
               onPressed: () {
                 print('open menu');
               },
             ),
             IconButton(
-              color: ktherdColor,
+              color: ThirdColor,
               icon: Icon(Icons.menu),
               onPressed: () {
                 print('open menu');
@@ -122,7 +122,7 @@ class ChatScreen extends StatelessWidget {
                     child: Icon(
                       Icons.mic,
                       size: 28,
-                      color: ktherdColor,
+                      color: ThirdColor,
                     ),
                     backgroundColor: Colors.amber,
                     elevation: 0,

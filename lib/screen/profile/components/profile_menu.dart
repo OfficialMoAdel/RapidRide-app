@@ -28,18 +28,18 @@ class ProfileMenu extends StatelessWidget {
           children: [
             SvgPicture.asset(
               icon,
-              color: ktherdColor,
+              color: ThirdColor,
               width: 22,
             ),
             SizedBox(width: 20),
             Expanded(
                 child: Text(
               text,
-              style: TextStyle(color: ktherdColor),
+              style: TextStyle(color: ThirdColor),
             )),
             SvgPicture.asset(
               'assets/icon/Arrow - Right 2.svg',
-              color: ktherdColor,
+              color: ThirdColor,
             ),
           ],
         ),
@@ -67,18 +67,18 @@ class ProfileMenu1 extends StatelessWidget {
         children: [
           SvgPicture.asset(
             icon,
-            color: ktherdColor,
+            color: ThirdColor,
             width: 22,
           ),
           SizedBox(width: 20),
           Expanded(
               child: Text(
             text,
-            style: TextStyle(color: ktherdColor),
+            style: TextStyle(color: ThirdColor),
           )),
           SvgPicture.asset(
             'assets/icon/Arrow - Right 2.svg',
-            color: ktherdColor,
+            color: ThirdColor,
           ),
         ],
       ),

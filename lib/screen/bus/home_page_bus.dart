@@ -20,7 +20,7 @@ class _HomePageBusState extends State<HomePageBus> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: kPrimaryColor,
+        backgroundColor: PrimaryColor,
         elevation: 0,
         title: Row(
           children: const [
@@ -53,7 +53,7 @@ class _HomePageBusState extends State<HomePageBus> {
                 children: [
                   Container(
                     height: 100,
-                    color: kPrimaryColor,
+                    color: PrimaryColor,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(16),
@@ -132,7 +132,7 @@ class _HomePageBusState extends State<HomePageBus> {
                                     Text(
                                       'when you want to go?',
                                       style: TextStyle(
-                                          color: kScandryColor, fontSize: 18),
+                                          color: ScandryColor, fontSize: 18),
                                     ),
                                     SizedBox(
                                       height: 6,
@@ -143,7 +143,7 @@ class _HomePageBusState extends State<HomePageBus> {
                                         border: InputBorder.none,
                                         icon: Icon(
                                           Icons.calendar_today_rounded,
-                                          color: kScandryColor,
+                                          color: ScandryColor,
                                         ),
                                         //  labelText: 'Enter Date',
                                       ),
@@ -179,7 +179,7 @@ class _HomePageBusState extends State<HomePageBus> {
                             Expanded(
                               child: Container(
                                 decoration: BoxDecoration(
-                                  color: kPrimaryColor,
+                                  color: PrimaryColor,
                                   borderRadius:
                                       BorderRadius.all(Radius.circular(8)),
                                 ),
@@ -210,7 +210,7 @@ class _HomePageBusState extends State<HomePageBus> {
                             Text(
                               'Recent Search',
                               style:
-                                  TextStyle(color: kScandryColor, fontSize: 18),
+                                  TextStyle(color: ScandryColor, fontSize: 18),
                             ),
                           ],
                         ),
@@ -235,7 +235,7 @@ class _HomePageBusState extends State<HomePageBus> {
                                           Icon(
                                             Icons.directions_car_sharp,
                                             size: 25,
-                                            color: kPrimaryColor,
+                                            color: PrimaryColor,
                                           ),
                                           SizedBox(
                                             width: 9,
@@ -243,7 +243,7 @@ class _HomePageBusState extends State<HomePageBus> {
                                           Text(
                                             'Elmansoura To Elmahalla',
                                             style: TextStyle(
-                                                color: kScandryColor,
+                                                color: ScandryColor,
                                                 fontWeight: FontWeight.w500),
                                           )
                                         ],
@@ -254,7 +254,7 @@ class _HomePageBusState extends State<HomePageBus> {
                                       Text(
                                         '23_01_2023',
                                         style: TextStyle(
-                                            color: kScandryColor, fontSize: 18),
+                                            color: ScandryColor, fontSize: 18),
                                       ),
                                       SizedBox(
                                         height: 6,
@@ -265,7 +265,7 @@ class _HomePageBusState extends State<HomePageBus> {
                                                 BorderRadius.circular(9)),
                                         width: double.infinity,
                                         child: MaterialButton(
-                                          color: kPrimaryColor,
+                                          color: PrimaryColor,
                                           onPressed: () {},
                                           child: Text(
                                             'Book Now',
@@ -294,7 +294,7 @@ class _HomePageBusState extends State<HomePageBus> {
                                           Icon(
                                             Icons.directions_car_sharp,
                                             size: 25,
-                                            color: kPrimaryColor,
+                                            color: PrimaryColor,
                                           ),
                                           SizedBox(
                                             width: 9,
@@ -302,7 +302,7 @@ class _HomePageBusState extends State<HomePageBus> {
                                           Text(
                                             'Elmansoura To Elmahalla',
                                             style: TextStyle(
-                                                color: kScandryColor,
+                                                color: ScandryColor,
                                                 fontWeight: FontWeight.w500),
                                           )
                                         ],
@@ -313,7 +313,7 @@ class _HomePageBusState extends State<HomePageBus> {
                                       Text(
                                         '11_12_2023',
                                         style: TextStyle(
-                                            color: kScandryColor, fontSize: 18),
+                                            color: ScandryColor, fontSize: 18),
                                       ),
                                       SizedBox(
                                         height: 6,
@@ -324,7 +324,7 @@ class _HomePageBusState extends State<HomePageBus> {
                                                 BorderRadius.circular(9)),
                                         width: double.infinity,
                                         child: MaterialButton(
-                                          color: kPrimaryColor,
+                                          color: PrimaryColor,
                                           onPressed: () {},
                                           child: Text(
                                             'Book Now',
@@ -353,7 +353,7 @@ class _HomePageBusState extends State<HomePageBus> {
                                           Icon(
                                             Icons.directions_car_sharp,
                                             size: 25,
-                                            color: kPrimaryColor,
+                                            color: PrimaryColor,
                                           ),
                                           SizedBox(
                                             width: 9,
@@ -361,7 +361,7 @@ class _HomePageBusState extends State<HomePageBus> {
                                           Text(
                                             'Elmansoura To Elmahalla',
                                             style: TextStyle(
-                                                color: kScandryColor,
+                                                color: ScandryColor,
                                                 fontWeight: FontWeight.w500),
                                           )
                                         ],
@@ -372,7 +372,7 @@ class _HomePageBusState extends State<HomePageBus> {
                                       Text(
                                         '09_11_2023',
                                         style: TextStyle(
-                                            color: kScandryColor, fontSize: 18),
+                                            color: ScandryColor, fontSize: 18),
                                       ),
                                       SizedBox(
                                         height: 6,
@@ -383,7 +383,7 @@ class _HomePageBusState extends State<HomePageBus> {
                                                 BorderRadius.circular(9)),
                                         width: double.infinity,
                                         child: MaterialButton(
-                                          color: kPrimaryColor,
+                                          color: PrimaryColor,
                                           onPressed: () {},
                                           child: Text(
                                             'Book Now',
@@ -416,7 +416,7 @@ class _HomePageBusState extends State<HomePageBus> {
                                   Text(
                                     'New Offers',
                                     style: TextStyle(
-                                        color: kScandryColor, fontSize: 18),
+                                        color: ScandryColor, fontSize: 18),
                                   ),
                                   SizedBox(
                                     height: 2,
@@ -445,7 +445,7 @@ class _HomePageBusState extends State<HomePageBus> {
                                   Text(
                                     'View all',
                                     style: TextStyle(
-                                        color: kScandryColor, fontSize: 18),
+                                        color: ScandryColor, fontSize: 18),
                                   ),
                                   SizedBox(
                                     height: 2,

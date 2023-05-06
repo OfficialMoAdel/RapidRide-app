@@ -31,7 +31,7 @@ class ProfilePic extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(10),
                   ),
-                  backgroundColor: kPrimaryColor,
+                  backgroundColor: PrimaryColor,
                 ),
                 onPressed: () {},
                 child: SvgPicture.asset("assets/icon/Edit.svg"),

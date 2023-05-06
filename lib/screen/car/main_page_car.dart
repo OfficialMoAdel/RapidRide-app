@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import '../../constants.dart';
 import '../booking_page.dart';
+import '../chat/ChatScreen.dart';
 import '../chat/inbox_Page.dart';
 import '../profile/profile_screen.dart';
 import '../wallet/wallet_page.dart';
@@ -39,32 +40,32 @@ class _MainPagecarState extends State<MainPagecar> {
         child: _WigetOptions.elementAt(_selactedIndex),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: kPrimaryColor,
+        selectedItemColor: PrimaryColor,
         //unselectedItemColor: kScandryColor,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/icon/Home.svg',
-                color: _selactedIndex == 0 ? kPrimaryColor : kScandryColor),
+                color: _selactedIndex == 0 ? PrimaryColor : ScandryColor),
             label: "Home",
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/icon/Paper.svg',
-                color: _selactedIndex == 1 ? kPrimaryColor : kScandryColor),
+                color: _selactedIndex == 1 ? PrimaryColor : ScandryColor),
             label: "Bookings",
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/icon/Message.svg',
-                color: _selactedIndex == 2 ? kPrimaryColor : kScandryColor),
+                color: _selactedIndex == 2 ? PrimaryColor : ScandryColor),
             label: "Inbox",
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/icon/Wallet.svg',
-                color: _selactedIndex == 3 ? kPrimaryColor : kScandryColor),
+                color: _selactedIndex == 3 ? PrimaryColor : ScandryColor),
             label: "Wallet",
           ),
           BottomNavigationBarItem(
             icon: SvgPicture.asset('assets/icon/Profile.svg',
-                color: _selactedIndex == 4 ? kPrimaryColor : kScandryColor),
+                color: _selactedIndex == 4 ? PrimaryColor : ScandryColor),
             label: "Profile",
           )
         ],

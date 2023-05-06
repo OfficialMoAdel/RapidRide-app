@@ -35,11 +35,11 @@ class customcontainer extends StatelessWidget {
                   children: [
                     Text(
                       name,
-                      style: TextStyle(color: ktherdColor),
+                      style: TextStyle(color: ThirdColor),
                     ),
                     Text(
                       Date,
-                      style: TextStyle(color: ktherdColor),
+                      style: TextStyle(color: ThirdColor),
                     ),
                   ]),
               SizedBox(
@@ -50,13 +50,13 @@ class customcontainer extends StatelessWidget {
                 children: [
                   Text(
                     '£$Price',
-                    style: TextStyle(color: ktherdColor),
+                    style: TextStyle(color: ThirdColor),
                   ),
                   Row(
                     children: [
                       Text(
                         '${actiontype} ',
-                        style: TextStyle(color: ktherdColor),
+                        style: TextStyle(color: ThirdColor),
                       ),
                       Container(
                         color:

@@ -59,7 +59,7 @@ class RegisterPage extends StatelessWidget {
                           'Create your \nAccount',
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
-                            color: ktherdColor,
+                            color: ThirdColor,
                             fontSize: 46,
                           ),
                         )
@@ -147,7 +147,7 @@ class RegisterPage extends StatelessWidget {
                       children: [
                         Text(
                           "Already have an account?",
-                          style: TextStyle(color: kScandryColor),
+                          style: TextStyle(color: ScandryColor),
                         ),
                         GestureDetector(
                           onTap: () {
@@ -155,7 +155,7 @@ class RegisterPage extends StatelessWidget {
                           },
                           child: Text(
                             ' Sign in',
-                            style: TextStyle(color: kPrimaryColor),
+                            style: TextStyle(color: PrimaryColor),
                           ),
                         )
                       ],

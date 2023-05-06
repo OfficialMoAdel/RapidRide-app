@@ -33,7 +33,7 @@ class IntroPage extends StatelessWidget {
                   style: TextStyle(
                       fontSize: 32.0,
                       fontWeight: FontWeight.bold,
-                      color: ktherdColor),
+                      color: ThirdColor),
                 ),
               )
             ],

@@ -28,7 +28,7 @@ class CustomTextFiled extends StatelessWidget {
       onChanged: onChanged,
       decoration: InputDecoration(
         filled: true,
-        fillColor: kScandryColor.withOpacity(.05),
+        fillColor: ScandryColor.withOpacity(.05),
         prefixIcon: icon,
 
         // SvgPicture.asset(
@@ -44,13 +44,13 @@ class CustomTextFiled extends StatelessWidget {
         ///   color: kScandryColor,
         //),
         hintText: hintText,
-        hintStyle: TextStyle(color: kScandryColor),
+        hintStyle: TextStyle(color: ScandryColor),
         enabledBorder: OutlineInputBorder(
           borderRadius: const BorderRadius.all(Radius.circular(8)),
-          borderSide: BorderSide(color: kScandryColor.withOpacity(0.05)),
+          borderSide: BorderSide(color: ScandryColor.withOpacity(0.05)),
         ),
         focusedBorder: OutlineInputBorder(
-          borderSide: BorderSide(color: kPrimaryColor),
+          borderSide: BorderSide(color: PrimaryColor),
           borderRadius: const BorderRadius.all(Radius.circular(8)),
         ),
       ),

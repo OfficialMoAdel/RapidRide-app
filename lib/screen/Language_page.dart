@@ -23,9 +23,9 @@ class _HomeState extends State<Home> {
       appBar: AppBar(
         title: Text(
           "Language",
-          style: TextStyle(color: ktherdColor),
+          style: TextStyle(color: ThirdColor),
         ),
-        leading: Icon(Icons.arrow_back, color: ktherdColor),
+        leading: Icon(Icons.arrow_back, color: ThirdColor),
         backgroundColor: Colors.white,
         elevation: 0,
       ),

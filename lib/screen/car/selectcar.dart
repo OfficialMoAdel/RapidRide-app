@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taxi_app/screen/payment_page.dart';
 import '../Textfeild.dart';
 import '../item_list.dart';
 import '../../widgets/coustom_butoon.dart';
@@ -17,11 +18,11 @@ class carselectscreen extends StatelessWidget {
         backgroundColor: Colors.white,
         leading: Icon(
           Icons.arrow_back,
-          color: ktherdColor,
+          color: ThirdColor,
         ),
         title: Text(
           'Select Car',
-          style: TextStyle(color: ktherdColor, fontSize: 18),
+          style: TextStyle(color: ThirdColor, fontSize: 18),
         ),
       ),
       body: Padding(
@@ -48,7 +49,7 @@ class carselectscreen extends StatelessWidget {
               Text(
                 'Promo Code',
                 style: TextStyle(
-                    color: ktherdColor,
+                    color: ThirdColor,
                     fontSize: 16,
                     fontWeight: FontWeight.bold),
               ),
@@ -66,7 +67,7 @@ class carselectscreen extends StatelessWidget {
                     ),
                     CircleAvatar(
                       radius: 15,
-                      backgroundColor: Colors.lime,
+                      backgroundColor: PrimaryColor,
                       child: Text(
                         '+',
                         style: TextStyle(fontSize: 12),
@@ -108,7 +109,12 @@ class carselectscreen extends StatelessWidget {
                       ),
                       CoustomButoon(
                         text: 'Continue',
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => new PaymentPage()));
+                        },
                       )
                     ]),
               ),

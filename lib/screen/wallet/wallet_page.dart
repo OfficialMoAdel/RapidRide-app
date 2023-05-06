@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:taxi_app/screen/wallet/transaction.dart';
 
 import '../../constants.dart';
 
@@ -15,19 +17,19 @@ class WalletScreen extends StatelessWidget {
           elevation: 0,
           title: Text('My E-Wallet',
               style: TextStyle(
-                  color: ktherdColor,
+                  color: ThirdColor,
                   fontSize: 22,
                   fontWeight: FontWeight.bold)),
           actions: [
             IconButton(
-              color: ktherdColor,
+              color: ThirdColor,
               icon: Icon(Icons.search),
               onPressed: () {
                 print('open menu');
               },
             ),
             IconButton(
-              color: ktherdColor,
+              color: ThirdColor,
               icon: Icon(Icons.menu),
               onPressed: () {
                 print('open menu');
@@ -60,10 +62,11 @@ class WalletScreen extends StatelessWidget {
                         ),
                         Spacer(),
                         Image(
-                          image: AssetImage('images/card.png'),
-                          height: 50,
-                          width: 50,
-                        )
+                          image: AssetImage(
+                              'assets/image/Auto Layout Horizontal.png'),
+                          height: 80,
+                          width: 80,
+                        ),
                       ],
                     ),
                     Text(
@@ -110,7 +113,7 @@ class WalletScreen extends StatelessWidget {
                               children: [
                                 Icon(
                                   Icons.wallet,
-                                  color: ktherdColor,
+                                  color: ThirdColor,
                                   size: 16,
                                 ),
                                 SizedBox(
@@ -119,7 +122,7 @@ class WalletScreen extends StatelessWidget {
                                 Text(
                                   'Top Up',
                                   style: TextStyle(
-                                      color: ktherdColor, fontSize: 18),
+                                      color: ThirdColor, fontSize: 18),
                                 )
                               ],
                             ),
@@ -141,11 +144,21 @@ class WalletScreen extends StatelessWidget {
                   'Transaction History',
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
                 ),
-                Text(
-                  ' See All',
-                  style: TextStyle(
-                      color: Colors.amber[500], fontWeight: FontWeight.bold),
-                )
+                GestureDetector(
+                  child: Text(
+                    ' See All',
+                    style: TextStyle(
+                        color: Colors.amber[500], fontWeight: FontWeight.bold),
+                  ),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                        builder: (context) => new Transaction(),
+                      ),
+                    );
+                  },
+                ),
               ],
             ),
             Expanded(

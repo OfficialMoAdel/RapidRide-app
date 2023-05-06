@@ -1,6 +1,7 @@
 import 'package:adobe_xd/pinned.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import '../constants.dart';
 
 class BookingPage extends StatelessWidget {
   const BookingPage({super.key});
@@ -58,7 +59,7 @@ class BookingPage extends StatelessWidget {
                                   style: TextStyle(
                                     fontFamily: 'Segoe UI',
                                     fontSize: 20,
-                                    color: const Color(0xff000000),
+                                    color: ThirdColor,
                                   ),
                                   softWrap: false,
                                 ),
@@ -72,7 +73,7 @@ class BookingPage extends StatelessWidget {
                                 style: TextStyle(
                                   fontFamily: 'Segoe UI',
                                   fontSize: 15,
-                                  color: const Color(0xffa1a1a1),
+                                  color: ScandryColor,
                                   fontWeight: FontWeight.w600,
                                   height: 1.3333333333333333,
                                 ),
@@ -89,7 +90,7 @@ class BookingPage extends StatelessWidget {
                                 style: TextStyle(
                                   fontFamily: 'Segoe UI',
                                   fontSize: 15,
-                                  color: const Color(0xffffb219),
+                                  color: PrimaryColor,
                                   fontWeight: FontWeight.w600,
                                   height: 1.3333333333333333,
                                 ),
@@ -106,7 +107,7 @@ class BookingPage extends StatelessWidget {
                                 style: TextStyle(
                                   fontFamily: 'Segoe UI',
                                   fontSize: 15,
-                                  color: const Color(0xffa1a1a1),
+                                  color: ScandryColor,
                                   fontWeight: FontWeight.w600,
                                   height: 1.3333333333333333,
                                 ),
@@ -122,9 +123,8 @@ class BookingPage extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(
                                       Radius.elliptical(9999.0, 9999.0)),
-                                  border: Border.all(
-                                      width: 1.0,
-                                      color: const Color(0xff000000)),
+                                  border:
+                                      Border.all(width: 1.0, color: ThirdColor),
                                 ),
                               ),
                             ),
@@ -135,9 +135,8 @@ class BookingPage extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(
                                       Radius.elliptical(9999.0, 9999.0)),
-                                  border: Border.all(
-                                      width: 1.0,
-                                      color: const Color(0xff000000)),
+                                  border:
+                                      Border.all(width: 1.0, color: ThirdColor),
                                 ),
                               ),
                             ),
@@ -157,9 +156,8 @@ class BookingPage extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(
                                       Radius.elliptical(9999.0, 9999.0)),
-                                  border: Border.all(
-                                      width: 1.0,
-                                      color: const Color(0xff000000)),
+                                  border:
+                                      Border.all(width: 1.0, color: ThirdColor),
                                 ),
                               ),
                             ),
@@ -170,9 +168,8 @@ class BookingPage extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(
                                       Radius.elliptical(9999.0, 9999.0)),
-                                  border: Border.all(
-                                      width: 1.0,
-                                      color: const Color(0xff000000)),
+                                  border:
+                                      Border.all(width: 1.0, color: ThirdColor),
                                 ),
                               ),
                             ),
@@ -183,9 +180,8 @@ class BookingPage extends StatelessWidget {
                                 decoration: BoxDecoration(
                                   borderRadius: BorderRadius.all(
                                       Radius.elliptical(9999.0, 9999.0)),
-                                  border: Border.all(
-                                      width: 1.0,
-                                      color: const Color(0xff000000)),
+                                  border:
+                                      Border.all(width: 1.0, color: ThirdColor),
                                 ),
                               ),
                             ),
@@ -245,7 +241,7 @@ class BookingPage extends StatelessWidget {
                                     style: TextStyle(
                                       fontFamily: 'Segoe UI',
                                       fontSize: 15,
-                                      color: const Color(0xff000000),
+                                      color: ThirdColor,
                                       fontWeight: FontWeight.w600,
                                       height: 1.3333333333333333,
                                     ),
@@ -264,7 +260,7 @@ class BookingPage extends StatelessWidget {
                                       style: TextStyle(
                                         fontFamily: 'Segoe UI',
                                         fontSize: 15,
-                                        color: const Color(0xff000000),
+                                        color: ThirdColor,
                                         fontWeight: FontWeight.w600,
                                         height: 1.3333333333333333,
                                       ),
@@ -282,7 +278,7 @@ class BookingPage extends StatelessWidget {
                                     style: TextStyle(
                                       fontFamily: 'Segoe UI',
                                       fontSize: 15,
-                                      color: const Color(0xff000000),
+                                      color: ThirdColor,
                                       fontWeight: FontWeight.w600,
                                       height: 1.3333333333333333,
                                     ),
@@ -381,7 +377,7 @@ class BookingPage extends StatelessWidget {
                                     style: TextStyle(
                                       fontFamily: 'Segoe UI',
                                       fontSize: 10,
-                                      color: const Color(0xff000000),
+                                      color: ThirdColor,
                                       fontWeight: FontWeight.w600,
                                       height: 2,
                                     ),
@@ -400,7 +396,7 @@ class BookingPage extends StatelessWidget {
                                       style: TextStyle(
                                         fontFamily: 'Segoe UI',
                                         fontSize: 10,
-                                        color: const Color(0xff000000),
+                                        color: ThirdColor,
                                         fontWeight: FontWeight.w600,
                                         height: 2,
                                       ),
@@ -420,7 +416,7 @@ class BookingPage extends StatelessWidget {
                                       style: TextStyle(
                                         fontFamily: 'Segoe UI',
                                         fontSize: 10,
-                                        color: const Color(0xff000000),
+                                        color: ThirdColor,
                                         fontWeight: FontWeight.w600,
                                         height: 2,
                                       ),
@@ -506,7 +502,7 @@ class BookingPage extends StatelessWidget {
                                   Pin(size: 35.0, end: 27.0),
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      color: const Color(0xffffb219),
+                                      color: PrimaryColor,
                                       borderRadius: BorderRadius.all(
                                           Radius.elliptical(9999.0, 9999.0)),
                                     ),
@@ -517,7 +513,7 @@ class BookingPage extends StatelessWidget {
                                   Pin(size: 35.0, middle: 0.6644),
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      color: const Color(0xffffb219),
+                                      color: PrimaryColor,
                                       borderRadius: BorderRadius.all(
                                           Radius.elliptical(9999.0, 9999.0)),
                                     ),
@@ -643,7 +639,7 @@ class BookingPage extends StatelessWidget {
                                     style: TextStyle(
                                       fontFamily: 'Segoe UI',
                                       fontSize: 15,
-                                      color: const Color(0xff000000),
+                                      color: ThirdColor,
                                       fontWeight: FontWeight.w600,
                                       height: 1.3333333333333333,
                                     ),
@@ -662,7 +658,7 @@ class BookingPage extends StatelessWidget {
                                       style: TextStyle(
                                         fontFamily: 'Segoe UI',
                                         fontSize: 15,
-                                        color: const Color(0xff000000),
+                                        color: ThirdColor,
                                         fontWeight: FontWeight.w600,
                                         height: 1.3333333333333333,
                                       ),
@@ -680,7 +676,7 @@ class BookingPage extends StatelessWidget {
                                     style: TextStyle(
                                       fontFamily: 'Segoe UI',
                                       fontSize: 15,
-                                      color: const Color(0xff000000),
+                                      color: ThirdColor,
                                       fontWeight: FontWeight.w600,
                                       height: 1.3333333333333333,
                                     ),
@@ -779,7 +775,7 @@ class BookingPage extends StatelessWidget {
                                     style: TextStyle(
                                       fontFamily: 'Segoe UI',
                                       fontSize: 10,
-                                      color: const Color(0xff000000),
+                                      color: ThirdColor,
                                       fontWeight: FontWeight.w600,
                                       height: 2,
                                     ),
@@ -798,7 +794,7 @@ class BookingPage extends StatelessWidget {
                                       style: TextStyle(
                                         fontFamily: 'Segoe UI',
                                         fontSize: 10,
-                                        color: const Color(0xff000000),
+                                        color: ThirdColor,
                                         fontWeight: FontWeight.w600,
                                         height: 2,
                                       ),
@@ -818,7 +814,7 @@ class BookingPage extends StatelessWidget {
                                       style: TextStyle(
                                         fontFamily: 'Segoe UI',
                                         fontSize: 10,
-                                        color: const Color(0xff000000),
+                                        color: ThirdColor,
                                         fontWeight: FontWeight.w600,
                                         height: 2,
                                       ),
@@ -904,7 +900,7 @@ class BookingPage extends StatelessWidget {
                                   Pin(size: 35.0, end: 27.0),
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      color: const Color(0xffffb219),
+                                      color: PrimaryColor,
                                       borderRadius: BorderRadius.all(
                                           Radius.elliptical(9999.0, 9999.0)),
                                     ),
@@ -915,7 +911,7 @@ class BookingPage extends StatelessWidget {
                                   Pin(size: 35.0, middle: 0.6644),
                                   child: Container(
                                     decoration: BoxDecoration(
-                                      color: const Color(0xffffb219),
+                                      color: PrimaryColor,
                                       borderRadius: BorderRadius.all(
                                           Radius.elliptical(9999.0, 9999.0)),
                                     ),
