@@ -29,10 +29,10 @@ class _EditeProfileScreenState extends State<EditeProfileScreen> {
         appBar: AppBar(
           toolbarHeight: 80,
           leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: ThirdColor),
+            icon: const Icon(Icons.arrow_back, color: ThirdColor),
             onPressed: () => Navigator.of(context).pop(),
           ),
-          title: Text(
+          title: const Text(
             "Edite Profile",
             style: TextStyle(color: ThirdColor),
           ),
@@ -56,7 +56,7 @@ class _EditeProfileScreenState extends State<EditeProfileScreen> {
                         });
                       },
                     ),
-                    SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
                     CustomTextFiled(
                       hintText: 'Name',
                       onChanged: (value) {
@@ -65,7 +65,7 @@ class _EditeProfileScreenState extends State<EditeProfileScreen> {
                         });
                       },
                     ),
-                    SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
                     CustomTextFiled(
                       hintText: 'Birthday',
                       onChanged: (value) {
@@ -74,7 +74,7 @@ class _EditeProfileScreenState extends State<EditeProfileScreen> {
                         });
                       },
                     ),
-                    SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
                     CustomTextFiled(
                       sufixI: SvgPicture.asset("assets/icon/Hide.svg"),
                       hintText: 'Email',
@@ -84,7 +84,7 @@ class _EditeProfileScreenState extends State<EditeProfileScreen> {
                         });
                       },
                     ),
-                    SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
                     CustomTextFiled(
                       hintText: 'Country',
                       onChanged: (value) {
@@ -93,7 +93,7 @@ class _EditeProfileScreenState extends State<EditeProfileScreen> {
                         });
                       },
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 16.0,
                     ),
                     CustomTextFiled(
@@ -103,7 +103,7 @@ class _EditeProfileScreenState extends State<EditeProfileScreen> {
                             mobileNumber = value;
                           });
                         }),
-                    SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
                     CustomTextFiled(
                         hintText: 'Enter gender',
                         onChanged: (value) {
@@ -111,7 +111,7 @@ class _EditeProfileScreenState extends State<EditeProfileScreen> {
                             gender = value;
                           });
                         }),
-                    SizedBox(height: 16.0),
+                    const SizedBox(height: 16.0),
                     Center(
                       child: CoustomButton(
                           text: 'Update',

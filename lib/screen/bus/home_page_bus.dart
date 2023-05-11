@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/intl.dart';
+import 'package:taxi_app/widgets/custom-text_filed.dart';
+import '../../widgets/halper_app.dart';
 import 'Buses_bage_select.dart';
 import '../../constants.dart';
 
@@ -20,6 +23,15 @@ class _HomePageBusState extends State<HomePageBus> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        leading: Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: GestureDetector(
+            child: SvgPicture.asset('assets/icon/Arrow - Left.svg'),
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ),
         backgroundColor: PrimaryColor,
         elevation: 0,
         title: Row(
@@ -27,20 +39,17 @@ class _HomePageBusState extends State<HomePageBus> {
             Text(
               'Home',
               style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.white),
+                  fontSize: 20, fontWeight: FontWeight.bold, color: ThirdColor),
             ),
           ],
         ),
         actions: [
-          IconButton(
-            color: Colors.white,
-            icon: Icon(Icons.add_alert),
-            onPressed: () {
-              print('open menu');
-            },
+          SvgPicture.asset(
+            'assets/icon/Notification.svg',
           ),
+          SizedBox(
+            width: 12,
+          )
         ],
       ),
       body: Container(
@@ -68,57 +77,25 @@ class _HomePageBusState extends State<HomePageBus> {
                               padding: const EdgeInsets.all(8.0),
                               child: Column(
                                 children: [
-                                  TextField(
-                                    decoration: InputDecoration(
-                                        labelText: 'From City',
-                                        contentPadding:
-                                            EdgeInsets.symmetric(vertical: 1)),
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                    ),
+                                  CustomTextFiled(
+                                    hintText: 'From City',
                                   ),
-                                  TextField(
-                                    decoration: InputDecoration(
-                                        labelText: 'To City',
-                                        contentPadding:
-                                            EdgeInsets.symmetric(vertical: 1)),
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                    ),
+                                  SizedBox(
+                                    height: 12,
+                                  ),
+                                  CustomTextFiled(
+                                    hintText: 'To City',
                                   ),
                                   SizedBox(
                                     height: 10,
                                   ),
-                                  /* Row(
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Text(
-                                        'Ac',
-                                        style: TextStyle(
-                                            color: kScandryColor , fontSize: 15),
-                                      ),
-                                      Text(
-                                        'NoN-Ac',
-                                        style: TextStyle(
-                                            color: kScandryColor , fontSize: 15),
-                                      ),
-                                      Text(
-                                        'SLEEPER',
-                                        style: TextStyle(
-                                            color: kScandryColor , fontSize: 15),
-                                      ),
-                                      Text(
-                                        'SEATER',
-                                        style: TextStyle(
-                                            color: kScandryColor , fontSize: 15),
-                                      ),
-                                    ],
-                                  ) */
                                 ],
                               ),
                             ),
                           ),
+                        ),
+                        SizedBox(
+                          height: 18,
                         ),
                         Row(
                           children: [
@@ -174,7 +151,7 @@ class _HomePageBusState extends State<HomePageBus> {
                               ),
                             ),
                             SizedBox(
-                              width: 5,
+                              width: 12,
                             ),
                             Expanded(
                               child: Container(
@@ -184,38 +161,24 @@ class _HomePageBusState extends State<HomePageBus> {
                                       BorderRadius.all(Radius.circular(8)),
                                 ),
                                 height: 80,
-                                // color: kPrimaryColor,
                                 child: IconButton(
                                   color: Colors.white,
                                   icon: Icon(Icons.search),
                                   onPressed: () {
-                                    Navigator.push(
-                                      context,
-                                      new MaterialPageRoute(
-                                        builder: (context) =>
-                                            new BusesPageSelect(),
-                                      ),
-                                    );
+                                    context.push(new BusesPageSelect());
                                   },
                                 ),
                               ),
                             ),
                           ],
                         ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        Row(
-                          children: [
-                            Text(
-                              'Recent Search',
-                              style:
-                                  TextStyle(color: ScandryColor, fontSize: 18),
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 5,
+                        Padding(
+                          padding: const EdgeInsets.symmetric(vertical: 12),
+                          child: Text(
+                            'Recent Search',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(color: ScandryColor, fontSize: 18),
+                          ),
                         ),
                         SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
@@ -402,7 +365,7 @@ class _HomePageBusState extends State<HomePageBus> {
                           ),
                         ),
                         SizedBox(
-                          height: 5,
+                          height: 15,
                         ),
                         SingleChildScrollView(
                           scrollDirection: Axis.horizontal,
@@ -419,7 +382,7 @@ class _HomePageBusState extends State<HomePageBus> {
                                         color: ScandryColor, fontSize: 18),
                                   ),
                                   SizedBox(
-                                    height: 2,
+                                    height: 12,
                                   ),
                                   Card(
                                     child: Container(
@@ -448,7 +411,7 @@ class _HomePageBusState extends State<HomePageBus> {
                                         color: ScandryColor, fontSize: 18),
                                   ),
                                   SizedBox(
-                                    height: 2,
+                                    height: 12,
                                   ),
                                   Card(
                                     child: Container(

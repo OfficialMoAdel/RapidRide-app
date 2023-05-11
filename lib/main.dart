@@ -1,19 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'screen/main_app.dart';
+import 'package:taxi_app/screen/intro_screen/splash_screen.dart';
 import 'cubit/auth/auth_cubit.dart';
 import 'routes.dart';
 
 int? isViewed;
 void main() async {
-  //
-  //
   /* SystemChrome.setSystemUIOverlayStyle(
       SystemUiOverlayStyle(statusBarColor: Colors.transparent));
   WidgetsFlutterBinding.ensureInitialized();
-  SharedPreferences prefs = await SharedPreferences.getInstance();
+  SharedPreferences prefs = await SharedPreferences.getInstance();//
   isViewed = prefs.getInt('IntroPage'); */
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -31,9 +29,9 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
           debugShowCheckedModeBanner: false,
           //home: isViewed != 0 ? OnBoard() : LetsIn(),
-          home: MianApp(), //onBordingScreen(),
+          home: SplashScreen(),
           routes: routes,
-          initialRoute: MianApp.id, //onBordingScreen.id,
+          initialRoute: SplashScreen.id,
           theme: ThemeData().copyWith(
             colorScheme: ThemeData()
                 .colorScheme

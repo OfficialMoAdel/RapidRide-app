@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
+import 'package:taxi_app/widgets/halper_app.dart';
 
 import '../../constants.dart';
 import '../../widgets/coustom_button.dart';
@@ -29,7 +30,7 @@ class LetsIn extends StatelessWidget {
                 const SizedBox(
                   height: 20,
                 ),
-                Text(
+                const Text(
                   textAlign: TextAlign.center,
                   'Lets you in',
                   style: TextStyle(
@@ -91,7 +92,8 @@ class LetsIn extends StatelessWidget {
                 ),
                 CoustomButton(
                   onTap: () {
-                    Navigator.pushNamed(context, LoginPage.id);
+                    context.Replacement(new LoginPage());
+                    //Navigator.pushNamed(context, LoginPage.id);
                   },
                   text: 'Sign in with password',
                 ),
@@ -101,15 +103,16 @@ class LetsIn extends StatelessWidget {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(
+                    const Text(
                       "Already have an account?",
                       style: TextStyle(color: ScandryColor),
                     ),
                     GestureDetector(
                       onTap: () {
-                        Navigator.pushNamed(context, RegisterPage.id);
+                        //Navigator.pushNamed(context, RegisterPage.id);
+                        context.Replacement(new RegisterPage());
                       },
-                      child: Text(
+                      child: const Text(
                         ' Sign Up',
                         style: TextStyle(color: PrimaryColor),
                       ),

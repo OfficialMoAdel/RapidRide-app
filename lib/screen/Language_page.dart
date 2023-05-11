@@ -30,8 +30,8 @@ class _HomeState extends State<Home> {
           onTap: () {
             () => Navigator.of(context).pop();
           },
-          child: SvgPicture.asset('assets/icon/Arrow - Left.svg'),
-        ), //Icon(Icons.arrow_back, color: ThirdColor),
+          child: Icon(Icons.arrow_back, color: ThirdColor),
+        ),
         backgroundColor: Colors.white,
         elevation: 0,
       ),

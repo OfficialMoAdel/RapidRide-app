@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_app/constants.dart';
+import '../constants.dart';
 
 itemList() {
   return Container(
@@ -26,7 +26,7 @@ itemList() {
               Text(
                 'Subtitle',
                 style: TextStyle(
-                  color: Colors.grey[600],
+                  color: ScandryColor,
                   fontSize: 14.0,
                 ),
               ),
@@ -48,7 +48,7 @@ itemList() {
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(12.0),
             border: Border.all(
-              color: Colors.grey,
+              color: ScandryColor,
               width: 2.0,
             ),
             color: true ? PrimaryColor : Colors.transparent,

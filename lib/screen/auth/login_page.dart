@@ -3,6 +3,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:taxi_app/screen/main_app.dart';
+import 'package:taxi_app/widgets/halper_app.dart';
 
 import '../../constants.dart';
 import '../../cubit/auth/auth_cubit.dart';
@@ -46,7 +48,7 @@ class LoginPage extends StatelessWidget {
                   ),
                   Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
+                    children: const [
                       Text(
                         'Login to you \nAccount',
                         style: TextStyle(
@@ -85,7 +87,7 @@ class LoginPage extends StatelessWidget {
                   const SizedBox(
                     height: 40,
                   ),
-                  Center(
+                  const Center(
                     child: Text(
                       'Forgot the password?',
                       style: TextStyle(
@@ -160,7 +162,8 @@ class LoginPage extends StatelessWidget {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Navigator.pushNamed(context, RegisterPage.id);
+                          // Navigator.pushNamed(context, RegisterPage.id);
+                          context.Replacement(new MainApp());
                         },
                         child: Text(
                           ' Sign up',
@@ -169,7 +172,7 @@ class LoginPage extends StatelessWidget {
                       )
                     ],
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 40,
                   ),
                 ],

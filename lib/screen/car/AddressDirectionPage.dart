@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:taxi_app/screen/car/selectcar.dart';
-import 'package:taxi_app/widgets/coustom_button.dart';
-
+import 'selectcar.dart';
+import '../../widgets/coustom_button.dart';
+import '../../widgets/halper_app.dart';
 import '../../constants.dart';
 
-// ignore_for_file: prefer_const_constructors
-//google_maps_flutter: ^2.2.5
 class AddressDirectionPage extends StatefulWidget {
   const AddressDirectionPage({super.key});
 
@@ -26,13 +25,52 @@ class _AddressDirectionPageState extends State<AddressDirectionPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-          toolbarHeight: 80,
-          title: Text('Address Direction'),
-          centerTitle: true,
-          titleTextStyle: TextStyle(
-              fontSize: 20.0, fontWeight: FontWeight.bold, color: ThirdColor),
-          backgroundColor: PrimaryColor),
+        leading: Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: GestureDetector(
+            child: SvgPicture.asset('assets/icon/Arrow - Left.svg'),
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ),
+        actions: [
+          SizedBox(
+            width: 12,
+          ),
+          CircleAvatar(
+            backgroundColor: YallowColor,
+            child: SvgPicture.asset(
+              'assets/icon/Search.svg',
+            ),
+          ),
+          SizedBox(
+            width: 12,
+          ),
+          CircleAvatar(
+            backgroundColor: YallowColor,
+            child: SvgPicture.asset(
+              'assets/icon/Notification.svg',
+            ),
+          ),
+          SizedBox(
+            width: 12,
+          ),
+          CircleAvatar(
+            backgroundColor: YallowColor,
+            child: SvgPicture.asset(
+              'assets/icon/Close Square.svg',
+            ),
+          ),
+          const SizedBox(
+            width: 24,
+          ),
+        ],
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+      ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -49,12 +87,7 @@ class _AddressDirectionPageState extends State<AddressDirectionPage> {
           ..._buildLocationList(),
           CoustomButton(
               text: "Continue To Order",
-              onTap: () => Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                      builder: (context) => new carselectscreen(),
-                    ),
-                  )),
+              onTap: () => context.push(new carselectscreen())),
           SizedBox(height: 20),
         ],
       ),

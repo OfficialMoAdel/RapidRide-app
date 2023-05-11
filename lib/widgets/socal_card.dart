@@ -20,8 +20,8 @@ class SocalCard extends StatelessWidget {
       child: Container(
         height: 60,
         width: 80,
-        margin: EdgeInsets.symmetric(horizontal: 10),
-        padding: EdgeInsets.all((12)),
+        margin: const EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.all((12)),
         decoration: BoxDecoration(
           border: Border.all(color: ScandryColor.withOpacity(.3)),
           borderRadius: BorderRadius.circular(16),
@@ -53,8 +53,8 @@ class SocalCard1 extends StatelessWidget {
       onTap: press as void Function()?,
       child: Container(
         height: 50,
-        margin: EdgeInsets.symmetric(horizontal: 10),
-        padding: EdgeInsets.all((12)),
+        margin: const EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.all((12)),
         decoration: BoxDecoration(
           border: Border.all(color: ScandryColor.withOpacity(.3)),
           borderRadius: BorderRadius.circular(16),
@@ -67,7 +67,7 @@ class SocalCard1 extends StatelessWidget {
               height: 24,
               width: 24,
             ),
-            SizedBox(
+            const SizedBox(
               width: 10,
             ),
             Text(

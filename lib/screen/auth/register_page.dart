@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
+import 'package:taxi_app/widgets/halper_app.dart';
 import '../../constants.dart';
 import '../../cubit/auth/auth_cubit.dart';
 import '../../widgets/coustom_button.dart';
@@ -35,14 +36,6 @@ class RegisterPage extends StatelessWidget {
         return ModalProgressHUD(
           inAsyncCall: isloding,
           child: Scaffold(
-            // appBar: AppBar(
-            //   leading: IconButton(
-            //     icon: Icon(Icons.arrow_back, color: ktherdColor),
-            //     onPressed: () => Navigator.of(context).pop(),
-            //   ),
-            //   backgroundColor: Colors.transparent,
-            //   elevation: 0.0,
-            // ),
             body: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Form(
@@ -54,7 +47,7 @@ class RegisterPage extends StatelessWidget {
                     ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
+                      children: const [
                         Text(
                           'Create your \nAccount',
                           style: TextStyle(
@@ -151,7 +144,9 @@ class RegisterPage extends StatelessWidget {
                         ),
                         GestureDetector(
                           onTap: () {
-                            Navigator.pushNamed(context, LoginPage.id);
+                            /* Navigator.pushNamed(context, LoginPage.id);
+                           */
+                            context.Replacement(new LoginPage());
                           },
                           child: Text(
                             ' Sign in',

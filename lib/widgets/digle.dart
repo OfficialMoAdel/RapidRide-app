@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:taxi_app/widgets/coustom_button.dart';
+import 'coustom_button.dart';
 
 import '../constants.dart';
 

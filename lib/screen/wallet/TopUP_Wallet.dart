@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_app/constants.dart';
 
+import '../../constants.dart';
 import '../../widgets/digle.dart';
 
 class TopUpWallet extends StatelessWidget {

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_app/screen/bus/AddressDirectionPagebus.dart';
+import 'package:flutter_svg/svg.dart';
+import 'AddressDirectionPagebus.dart';
+import '../../widgets/halper_app.dart';
 import '../../constants.dart';
 
 class BusesPageSelect extends StatelessWidget {
@@ -8,21 +10,22 @@ class BusesPageSelect extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: PrimaryColor,
-        leading: IconButton(
-          color: Colors.white,
-          onPressed: () {
-            () => Navigator.of(context).pop();
-          },
-          icon: Icon(Icons.arrow_back_outlined),
+        leading: Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: GestureDetector(
+            child: SvgPicture.asset('assets/icon/Arrow - Left.svg'),
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+          ),
         ),
         title: Text('Buses'),
         actions: [
-          IconButton(
-            color: Colors.white,
-            icon: Icon(Icons.menu_outlined),
-            onPressed: () {
-              print('open menu');
-            },
+          SvgPicture.asset(
+            'assets/icon/Filter.svg',
+          ),
+          const SizedBox(
+            width: 24,
           ),
         ],
       ),
@@ -61,15 +64,12 @@ class BusesPageSelect extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 15,
             ),
             GestureDetector(
               onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => new AddressDirectionPageBus()));
+                context.push(new AddressDirectionPageBus());
               },
               child: Expanded(
                 child: Card(

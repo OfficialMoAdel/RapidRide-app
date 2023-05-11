@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import '../../../widgets/halper_app.dart';
+import '../../Language_page.dart';
 import '../../contact_us_page.dart';
 import '../../notifications.dart';
 import '../../payment_settings.dart';
@@ -10,7 +12,7 @@ class Body extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
-      padding: EdgeInsets.symmetric(vertical: 20),
+      padding: const EdgeInsets.symmetric(vertical: 20),
       child: Column(
         children: [
           ProfilePic(),
@@ -18,16 +20,7 @@ class Body extends StatelessWidget {
           ProfileMenu(
             text: "Edit Profile",
             icon: "assets/icon/Profile.svg",
-            press: () => {
-              Navigator.push(
-                context,
-                new MaterialPageRoute(
-                  builder: (context) => new EditeProfileScreen(),
-                ),
-              )
-
-              /*Navigator.pushNamed(context, EditeProfileScreen.id)*/
-            },
+            press: () => {context.push(new EditeProfileScreen())},
           ),
           ProfileMenu(
             text: "Address",
@@ -37,30 +30,27 @@ class Body extends StatelessWidget {
           ProfileMenu(
             text: "Notification",
             icon: "assets/icon/Notification.svg",
-            press: () => {
-              Navigator.push(
-                  context,
-                  new MaterialPageRoute(
-                      builder: (context) => new NotificationsPage()))
-            },
+            press: () => {context.push(new NotificationsPage())},
           ),
           ProfileMenu(
             text: "Payment",
             icon: "assets/icon/Wallet.svg",
             press: () {
-              Navigator.push(context,
-                  new MaterialPageRoute(builder: (context) => new payment()));
+              context.push(new payment());
+            },
+          ),
+          ProfileMenu(
+            text: "Languge",
+            icon: "assets/icon/More Circle.svg",
+            press: () {
+              context.push(new LanguagePage());
             },
           ),
           ProfileMenu(
             text: "Help Center",
             icon: "assets/icon/Info Square.svg",
             press: () {
-              //Navigator.pushNamed(context, ContactUsPage.id);
-              Navigator.push(
-                  context,
-                  new MaterialPageRoute(
-                      builder: (context) => new ContactUsPage()));
+              context.push(new ContactUsPage());
             },
           ),
           ProfileMenu(

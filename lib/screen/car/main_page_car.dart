@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+
 import '../../constants.dart';
-import '../booking_page.dart';
-import '../chat/ChatScreen.dart';
+import '../Booking/booking_page.dart';
 import '../chat/inbox_Page.dart';
 import '../profile/profile_screen.dart';
 import '../wallet/wallet_page.dart';

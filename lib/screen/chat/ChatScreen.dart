@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../constants.dart';
 
@@ -14,9 +15,42 @@ class ChatScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
+        backgroundColor: Color(0xffFAFAFA),
+        elevation: 0.0,
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: SvgPicture.asset('assets/icon/Arrow - Left.svg')),
+            Text(
+              'Sara',
+              style: TextStyle(color: ThirdColor),
+            )
+          ],
+        ),
+        actions: [
+          GestureDetector(
+              onTap: () {
+                //  context.push(new HomepageCar());
+              },
+              child: SvgPicture.asset('assets/icon/Call.svg')),
+          const SizedBox(
+            width: 24,
+          ),
+          SvgPicture.asset('assets/icon/More Circle.svg'),
+          const SizedBox(
+            width: 24,
+          ),
+        ],
+      ),
+      /* AppBar(
           backgroundColor: Colors.white,
           elevation: 0,
-          leading: IconButton(
+          leading: SvgPicture.asset('assets/icon/Arrow - Left.svg'),
+          /* IconButton(
             color: ThirdColor,
             onPressed: () {
               () => Navigator.of(context).pop();
@@ -24,7 +58,7 @@ class ChatScreen extends StatelessWidget {
             icon: Icon(
               Icons.arrow_back_outlined,
             ),
-          ),
+          ), */
           title: Text(
             'Sara',
             style: TextStyle(color: ThirdColor, fontSize: 22),
@@ -44,7 +78,7 @@ class ChatScreen extends StatelessWidget {
                 print('open menu');
               },
             ),
-          ]),
+          ]), */
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView(
@@ -73,8 +107,8 @@ class ChatScreen extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(20),
                                 color:
                                     (messages[index].messageType == "recevier"
-                                        ? Colors.grey.shade200
-                                        : Colors.amberAccent),
+                                        ? ScandryColor
+                                        : PrimaryColor),
                               ),
                               padding: EdgeInsets.all(13),
                               child: Text(
@@ -87,7 +121,7 @@ class ChatScreen extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 230,
               ),
               Row(
@@ -96,7 +130,7 @@ class ChatScreen extends StatelessWidget {
                     child: Container(
                       height: 50,
                       decoration: BoxDecoration(
-                          color: Colors.grey[100],
+                          color: ScandryColor,
                           borderRadius: BorderRadius.circular(15)),
                       padding:
                           EdgeInsets.symmetric(vertical: 6, horizontal: 17),
@@ -108,7 +142,7 @@ class ChatScreen extends StatelessWidget {
                               Icons.photo_size_select_actual_outlined,
                               size: 18,
                             ),
-                            color: Colors.grey,
+                            color: ScandryColor,
                           ),
                           hintText: 'Message...',
                           border: InputBorder.none,
@@ -116,7 +150,7 @@ class ChatScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 15,
                   ),
                   FloatingActionButton(
@@ -126,7 +160,7 @@ class ChatScreen extends StatelessWidget {
                       size: 28,
                       color: ThirdColor,
                     ),
-                    backgroundColor: Colors.amber,
+                    backgroundColor: PrimaryColor,
                     elevation: 0,
                   )
                 ],

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import '../widgets/halper_app.dart';
 import 'bus/main_page_bus.dart';
 import 'car/main_page_car.dart';
 import '../widgets/coustom_button.dart';
 import '../constants.dart';
 
-class MianApp extends StatelessWidget {
-  const MianApp({super.key});
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
   static String id = 'MianApp';
 
   @override
@@ -29,48 +30,18 @@ class MianApp extends StatelessWidget {
             children: [
               CoustomButton(
                 text: 'Car',
-                onTap: () => {
-                  Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                      builder: (context) => new MainPagecar(),
-                    ),
-                  )
-                },
+                onTap: () => {context.push(new MainPagecar())},
               ),
               CoustomButton(
                 text: 'Bus',
-                onTap: () => {
-                  Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                      builder: (context) => new MainPageBus(),
-                    ),
-                  )
-                },
+                onTap: () => {context.push(new MainPageBus())},
               ),
               CoustomButton(
                 text: 'MicroBus',
                 onTap: () => {
-                  /* Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                      builder: (context) => new MainPageBus(),
-                    ),
-                  ) */
+                  // context.push(new MainPageBus())
                 },
               ),
-              /* CoustomButton(
-                text: 'MicroBus',
-                onTap: () => {
-                  /* Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                      builder: (context) => new MainPageBus(),
-                    ),
-                  ) */
-                },
-              ) */
             ],
           ),
         ),

@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_app/screen/payment_page.dart';
-import 'package:taxi_app/widgets/custom-text_filed.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'payment_page.dart';
+import '../../widgets/custom-text_filed.dart';
+import '../../widgets/halper_app.dart';
 import '../item_list.dart';
 import '../../widgets/coustom_button.dart';
-
 import '../../constants.dart';
 
 class carselectscreen extends StatelessWidget {
@@ -13,12 +14,18 @@ class carselectscreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
         elevation: 0.0,
-        backgroundColor: Colors.white,
-        leading: Icon(
-          Icons.arrow_back,
-          color: ThirdColor,
+        backgroundColor: Colors.transparent,
+        leading: Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: GestureDetector(
+            child: SvgPicture.asset('assets/icon/Arrow - Left.svg'),
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+          ),
         ),
         title: Text(
           'Select Car',
@@ -32,7 +39,7 @@ class carselectscreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: 25,
+                height: 95,
               ),
               Text("Select the vehicle you want to ride."),
               ListView.builder(
@@ -41,51 +48,55 @@ class carselectscreen extends StatelessWidget {
                 itemCount: 3,
               ),
               Divider(
-                color: Colors.grey,
+                color: ScandryColor,
                 indent: 5,
                 endIndent: 5,
                 thickness: 1,
               ),
-              Text(
-                'Promo Code',
-                style: TextStyle(
-                    color: ThirdColor,
-                    fontSize: 16,
-                    fontWeight: FontWeight.bold),
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 12),
+                child: Text(
+                  'Promo Code',
+                  style: TextStyle(
+                      color: ThirdColor,
+                      fontSize: 16,
+                      fontWeight: FontWeight.bold),
+                ),
               ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  SizedBox(
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 18),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SizedBox(
                       height: 50,
                       width: MediaQuery.of(context).size.width * 0.8,
                       child: CustomTextFiled(
                         hintText: "Enter Promo code",
-                      )),
-                  CircleAvatar(
-                    radius: 15,
-                    backgroundColor: PrimaryColor,
-                    child: Text(
-                      '+',
-                      style: TextStyle(fontSize: 12),
+                      ),
                     ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 40,
+                    SizedBox(
+                      width: 12,
+                    ),
+                    CircleAvatar(
+                      radius: 15,
+                      backgroundColor: PrimaryColor,
+                      child: Text(
+                        '+',
+                        style: TextStyle(fontSize: 12),
+                      ),
+                    ),
+                  ],
+                ),
               ),
               Container(
                 height: 210,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(8.0),
-                      topRight: Radius.circular(8.0),
-                    ),
-                    color: Colors.grey.shade100),
+                  borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(8.0),
+                    topRight: Radius.circular(8.0),
+                  ),
+                ),
                 child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
@@ -106,13 +117,13 @@ class carselectscreen extends StatelessWidget {
                           ),
                         ),
                       ),
+                      SizedBox(
+                        height: 18,
+                      ),
                       CoustomButton(
                         text: 'Continue',
                         onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: (context) => new PaymentPage()));
+                          context.push(new PaymentPage());
                         },
                       )
                     ]),

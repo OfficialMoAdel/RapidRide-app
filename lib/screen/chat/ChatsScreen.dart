@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_app/screen/chat/ChatScreen.dart';
-
+import 'ChatScreen.dart';
+import '../../widgets/halper_app.dart';
 import '../../constants.dart';
 
 class ChatsScreen extends StatefulWidget {
@@ -45,12 +45,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                 child: ListView(
               children: [
                 GestureDetector(
-                  onTap: () => Navigator.push(
-                    context,
-                    new MaterialPageRoute(
-                      builder: (context) => new ChatScreen(),
-                    ),
-                  ),
+                  onTap: () => context.push(new ChatScreen()),
                   child: Row(
                     children: [
                       CircleAvatar(
@@ -58,7 +53,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                         backgroundImage: NetworkImage(
                             'https://tse3.mm.bing.net/th?id=OIP.Ri2fV_CRt_3gpmX7KAjq6AHaHa&pid=Api&P=0'),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         width: 15,
                       ),
                       Expanded(
@@ -77,7 +72,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                                 ),
                                 CircleAvatar(
                                   radius: 13,
-                                  backgroundColor: Colors.amber,
+                                  backgroundColor: PrimaryColor,
                                   child: Text(
                                     '2',
                                     style: TextStyle(
@@ -88,7 +83,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                                 ),
                               ],
                             ),
-                            SizedBox(
+                            const SizedBox(
                               height: 5,
                             ),
                             Row(
@@ -117,7 +112,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                       backgroundImage: NetworkImage(
                           'https://tse3.mm.bing.net/th?id=OIP.Ri2fV_CRt_3gpmX7KAjq6AHaHa&pid=Api&P=0'),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Expanded(
@@ -135,7 +130,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                               ),
                               CircleAvatar(
                                 radius: 13,
-                                backgroundColor: Colors.amber,
+                                backgroundColor: PrimaryColor,
                                 child: Text(
                                   '2',
                                   style: TextStyle(
@@ -146,7 +141,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                               ),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 5,
                           ),
                           Row(
@@ -164,7 +159,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -192,7 +187,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                               ),
                               CircleAvatar(
                                 radius: 13,
-                                backgroundColor: Colors.amber,
+                                backgroundColor: PrimaryColor,
                                 child: Text(
                                   '2',
                                   style: TextStyle(
@@ -221,7 +216,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -249,7 +244,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                               ),
                               CircleAvatar(
                                 radius: 13,
-                                backgroundColor: Colors.amber,
+                                backgroundColor: PrimaryColor,
                                 child: Text(
                                   '2',
                                   style: TextStyle(
@@ -278,7 +273,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -306,7 +301,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                               ),
                               CircleAvatar(
                                 radius: 13,
-                                backgroundColor: Colors.amber,
+                                backgroundColor: PrimaryColor,
                                 child: Text(
                                   '2',
                                   style: TextStyle(
@@ -335,7 +330,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -345,7 +340,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                       backgroundImage: NetworkImage(
                           'https://tse3.mm.bing.net/th?id=OIP.Ri2fV_CRt_3gpmX7KAjq6AHaHa&pid=Api&P=0'),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Expanded(
@@ -363,7 +358,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                               ),
                               CircleAvatar(
                                 radius: 13,
-                                backgroundColor: Colors.amber,
+                                backgroundColor: PrimaryColor,
                                 child: Text(
                                   '2',
                                   style: TextStyle(
@@ -374,7 +369,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                               ),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 5,
                           ),
                           Row(
@@ -392,7 +387,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -402,7 +397,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                       backgroundImage: NetworkImage(
                           'https://tse3.mm.bing.net/th?id=OIP.Ri2fV_CRt_3gpmX7KAjq6AHaHa&pid=Api&P=0'),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Expanded(
@@ -420,7 +415,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                               ),
                               CircleAvatar(
                                 radius: 13,
-                                backgroundColor: Colors.amber,
+                                backgroundColor: PrimaryColor,
                                 child: Text(
                                   '2',
                                   style: TextStyle(
@@ -431,7 +426,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                               ),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 5,
                           ),
                           Row(
@@ -449,7 +444,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
                 Row(
@@ -459,7 +454,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                       backgroundImage: NetworkImage(
                           'https://tse3.mm.bing.net/th?id=OIP.Ri2fV_CRt_3gpmX7KAjq6AHaHa&pid=Api&P=0'),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       width: 15,
                     ),
                     Expanded(
@@ -477,7 +472,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                               ),
                               CircleAvatar(
                                 radius: 13,
-                                backgroundColor: Colors.amber,
+                                backgroundColor: PrimaryColor,
                                 child: Text(
                                   '2',
                                   style: TextStyle(
@@ -488,7 +483,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                               ),
                             ],
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 5,
                           ),
                           Row(
@@ -506,7 +501,7 @@ class _ChatsScreenState extends State<ChatsScreen> {
                     )
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
               ],

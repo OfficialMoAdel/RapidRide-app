@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_app/widgets/coustom_button.dart';
-
-import '../constants.dart';
+import 'package:flutter_svg/svg.dart';
+import 'package:taxi_app/screen/car/DirectionPage.dart';
+import '../../widgets/coustom_button.dart';
+import '../../widgets/halper_app.dart';
+import '../../constants.dart';
 
 class PaymentPage extends StatefulWidget {
   const PaymentPage({Key? key}) : super(key: key);
@@ -14,7 +16,17 @@ class _PaymentPageState extends State<PaymentPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
+        leading: Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: GestureDetector(
+            child: SvgPicture.asset('assets/icon/Arrow - Left.svg'),
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ),
         title: Text(
           'Payment',
           style: TextStyle(color: ThirdColor),
@@ -28,18 +40,20 @@ class _PaymentPageState extends State<PaymentPage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             _buildButton('My Wallet', Icons.account_balance_wallet),
+            _buildButton('Cash Money symbol', Icons.attach_money),
             _buildButton('PayPal Payment', Icons.paypal),
             _buildButton('Google Pay payment', Icons.g_mobiledata),
             _buildButton('Apple Pay payment', Icons.apple),
             _buildButton('MasterCard payment', Icons.card_travel),
-            _buildButton('Cash Money symbol', Icons.attach_money),
             SizedBox(height: 20),
-            CoustomButton(
-              text: "Continue",
-              onTap: () {
-                Navigator.push(context,
-                    MaterialPageRoute(builder: (context) => new PaymentPage()));
-              },
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: CoustomButton(
+                text: "Continue",
+                onTap: () {
+                  context.push(new DirectionPage());
+                },
+              ),
             )
           ],
         ),
@@ -49,11 +63,12 @@ class _PaymentPageState extends State<PaymentPage> {
 
   Widget _buildButton(String text, IconData icon) {
     return Container(
-      //padding: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+      width: 280,
+      height: 40,
       margin: EdgeInsets.symmetric(horizontal: 20, vertical: 10),
       child: ElevatedButton.icon(
         onPressed: () {
-          //TODO: Add functionality for the payment button
+          context.push(new DirectionPage());
         },
         style: ElevatedButton.styleFrom(
           backgroundColor: Colors.white,

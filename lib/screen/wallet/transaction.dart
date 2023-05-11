@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 import '../../constants.dart';
 import '../../widgets/container.dart';
@@ -19,13 +20,11 @@ class Transaction extends StatelessWidget {
           title: Row(
             mainAxisAlignment: MainAxisAlignment.start,
             children: [
-              IconButton(
-                onPressed: () {},
-                icon: Icon(
-                  Icons.arrow_back_outlined,
-                  color: ThirdColor,
-                ),
-              ),
+              GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: SvgPicture.asset('assets/icon/Arrow - Left.svg')),
               Text(
                 'Transaction History',
                 style: TextStyle(color: ThirdColor),
@@ -33,12 +32,17 @@ class Transaction extends StatelessWidget {
             ],
           ),
           actions: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(
-                Icons.search_sharp,
-                color: ThirdColor,
-              ),
+            GestureDetector(
+                onTap: () {
+                  //  context.push(new HomepageCar());
+                },
+                child: SvgPicture.asset('assets/icon/Search.svg')),
+            const SizedBox(
+              width: 24,
+            ),
+            SvgPicture.asset('assets/icon/More Circle.svg'),
+            const SizedBox(
+              width: 24,
             ),
           ],
         ),

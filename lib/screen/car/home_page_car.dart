@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:taxi_app/widgets/coustom_button.dart';
+import '../../widgets/coustom_button.dart';
+import '../../widgets/halper_app.dart';
 import '../../constants.dart';
 import '../../widgets/custom-text_filed.dart';
 import 'AddressDirectionPage.dart';
@@ -21,8 +22,52 @@ class _HomepageCarState extends State<HomepageCar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       appBar: AppBar(
-          title: Text('Home App'), backgroundColor: PrimaryColor, elevation: 0),
+        leading: Padding(
+          padding: const EdgeInsets.all(18.0),
+          child: GestureDetector(
+            child: SvgPicture.asset('assets/icon/Arrow - Left.svg'),
+            onTap: () {
+              Navigator.of(context).pop();
+            },
+          ),
+        ),
+        actions: [
+          SizedBox(
+            width: 12,
+          ),
+          CircleAvatar(
+            backgroundColor: YallowColor,
+            child: SvgPicture.asset(
+              'assets/icon/Search.svg',
+            ),
+          ),
+          SizedBox(
+            width: 12,
+          ),
+          CircleAvatar(
+            backgroundColor: YallowColor,
+            child: SvgPicture.asset(
+              'assets/icon/Notification.svg',
+            ),
+          ),
+          SizedBox(
+            width: 12,
+          ),
+          CircleAvatar(
+            backgroundColor: YallowColor,
+            child: SvgPicture.asset(
+              'assets/icon/Close Square.svg',
+            ),
+          ),
+          const SizedBox(
+            width: 24,
+          ),
+        ],
+        elevation: 0,
+        backgroundColor: Colors.transparent,
+      ),
       body: Stack(
         children: <Widget>[
           GoogleMap(
@@ -57,21 +102,15 @@ class _HomepageCarState extends State<HomepageCar> {
                 ),
                 child: Column(
                   children: <Widget>[
-                    Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: TextField(
-                        decoration: InputDecoration(
-                          hintText: "Where do you want to go?",
-                          hintStyle: TextStyle(color: ThirdColor),
-                          border: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20),
-                          ),
-                        ),
-                      ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height / 50,
                     ),
                     Text("Select Address",
                         style: TextStyle(
                             fontSize: 18, fontWeight: FontWeight.bold)),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height / 50,
+                    ),
                     ListTile(
                         minLeadingWidth: 12,
                         leading: SvgPicture.asset(
@@ -82,6 +121,9 @@ class _HomepageCarState extends State<HomepageCar> {
                         title: CustomTextFiled(
                           hintText: 'From',
                         )),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height / 80,
+                    ),
                     ListTile(
                         minLeadingWidth: 12,
                         leading: SvgPicture.asset(
@@ -91,15 +133,18 @@ class _HomepageCarState extends State<HomepageCar> {
                         title: CustomTextFiled(
                           hintText: 'Destination',
                         )),
-                    CoustomButton(
-                      text: 'Search',
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) =>
-                                    new AddressDirectionPage()));
-                      },
+                    /* SizedBox(
+                      height: MediaQuery.of(context).size.height / 50, 
+                    ),*/
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                          vertical: 12, horizontal: 24),
+                      child: CoustomButton(
+                        text: 'Search',
+                        onTap: () {
+                          context.push(new AddressDirectionPage());
+                        },
+                      ),
                     )
                   ],
                 ),

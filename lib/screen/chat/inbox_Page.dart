@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:taxi_app/screen/chat/ChatsScreen.dart';
+import 'package:flutter_svg/svg.dart';
+import '../car/home_page_car.dart';
+import 'ChatsScreen.dart';
 import 'CallsScreen.dart';
-import 'ChatScreen.dart';
 import '../../constants.dart';
 
 class InboxPage extends StatefulWidget {
@@ -28,31 +29,38 @@ class _InboxPageState extends State<InboxPage>
         appBar: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,
-          title: Text(
+          title: const Text(
             'Inbox',
             style: TextStyle(
                 color: ThirdColor, fontWeight: FontWeight.w500, fontSize: 21),
           ),
           actions: [
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.search),
-              color: ThirdColor,
+            GestureDetector(
+                /* onTap: () {
+
+                  
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => HomepageCar()),
+                  );
+                }, */
+                child: SvgPicture.asset('assets/icon/Search.svg')),
+            SizedBox(
+              width: 24,
             ),
-            IconButton(
-              onPressed: () {},
-              icon: Icon(Icons.menu),
-              color: ThirdColor,
+            SvgPicture.asset('assets/icon/More Circle.svg'),
+            const SizedBox(
+              width: 24,
             ),
           ],
-          bottom: TabBar(
-            labelColor: Colors.amber,
+          bottom: const TabBar(
+            labelColor: PrimaryColor,
             indicatorSize: TabBarIndicatorSize.tab,
             indicatorPadding: EdgeInsets.symmetric(horizontal: 22),
             labelPadding: EdgeInsets.symmetric(horizontal: 22),
             labelStyle: TextStyle(fontSize: 18, fontWeight: FontWeight.w500),
-            indicatorColor: Colors.amber,
-            unselectedLabelColor: Colors.grey,
+            indicatorColor: PrimaryColor,
+            unselectedLabelColor: ScandryColor,
             tabs: [
               Tab(
                 text: "Chats",

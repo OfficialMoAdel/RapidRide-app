@@ -1,7 +1,8 @@
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:taxi_app/screen/wallet/TopUP_Wallet.dart';
-import 'package:taxi_app/screen/wallet/transaction.dart';
+import 'package:flutter_svg/svg.dart';
+import 'TopUP_Wallet.dart';
+import 'transaction.dart';
+import '../../widgets/halper_app.dart';
 
 import '../../constants.dart';
 
@@ -14,29 +15,26 @@ class WalletScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-          backgroundColor: Colors.white,
-          elevation: 0,
-          title: Text('My E-Wallet',
-              style: TextStyle(
-                  color: ThirdColor,
-                  fontSize: 22,
-                  fontWeight: FontWeight.bold)),
-          actions: [
-            IconButton(
-              color: ThirdColor,
-              icon: Icon(Icons.search),
-              onPressed: () {
-                print('open menu');
+        backgroundColor: Colors.white,
+        elevation: 0,
+        title: Text('My E-Wallet',
+            style: TextStyle(
+                color: ThirdColor, fontSize: 22, fontWeight: FontWeight.bold)),
+        actions: [
+          GestureDetector(
+              onTap: () {
+                //  context.push(new HomepageCar());
               },
-            ),
-            IconButton(
-              color: ThirdColor,
-              icon: Icon(Icons.menu),
-              onPressed: () {
-                print('open menu');
-              },
-            ),
-          ]),
+              child: SvgPicture.asset('assets/icon/Search.svg')),
+          const SizedBox(
+            width: 24,
+          ),
+          SvgPicture.asset('assets/icon/More Circle.svg'),
+          const SizedBox(
+            width: 24,
+          ),
+        ],
+      ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
@@ -45,8 +43,7 @@ class WalletScreen extends StatelessWidget {
             Container(
               padding: EdgeInsetsDirectional.all(13),
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Colors.amber[400]),
+                  borderRadius: BorderRadius.circular(25), color: PrimaryColor),
               child: Padding(
                 padding: const EdgeInsets.all(16),
                 child: Column(
@@ -105,12 +102,7 @@ class WalletScreen extends StatelessWidget {
                         Container(
                           child: ElevatedButton(
                             onPressed: () {
-                              Navigator.push(
-                                context,
-                                new MaterialPageRoute(
-                                  builder: (context) => new TopUpWallet(),
-                                ),
-                              );
+                              context.push(new TopUpWallet());
                             },
                             style: ElevatedButton.styleFrom(
                                 backgroundColor: Colors.white,
@@ -156,15 +148,10 @@ class WalletScreen extends StatelessWidget {
                   child: Text(
                     ' See All',
                     style: TextStyle(
-                        color: Colors.amber[500], fontWeight: FontWeight.bold),
+                        color: PrimaryColor, fontWeight: FontWeight.bold),
                   ),
                   onTap: () {
-                    Navigator.push(
-                      context,
-                      new MaterialPageRoute(
-                        builder: (context) => new Transaction(),
-                      ),
-                    );
+                    context.push(new Transaction());
                   },
                 ),
               ],

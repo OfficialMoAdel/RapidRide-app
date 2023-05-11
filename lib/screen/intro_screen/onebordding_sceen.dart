@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:taxi_app/constants.dart';
+import 'package:taxi_app/screen/auth/lets_in.dart';
+import 'package:taxi_app/widgets/halper_app.dart';
 
 import '../../widgets/coustom_button.dart';
 import '../../widgets/intro_page.dart';
@@ -77,10 +80,10 @@ class _onBordingScreenState extends State<onBordingScreen> {
                   controller: _controller,
                   count: 3,
                   effect: const ExpandingDotsEffect(
-                    activeDotColor: Color(0xFFFEBB1B),
+                    activeDotColor: PrimaryColor,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 30,
                 ),
                 //next or done
@@ -89,10 +92,7 @@ class _onBordingScreenState extends State<onBordingScreen> {
                   child: onLastpage
                       ? GestureDetector(
                           onTap: () {
-                            Navigator.push(context,
-                                MaterialPageRoute(builder: (context) {
-                              return LoginPage();
-                            }));
+                            context.Replacement(new LetsIn());
                           },
                           child: CoustomButton(text: 'done'),
                         )
@@ -106,7 +106,7 @@ class _onBordingScreenState extends State<onBordingScreen> {
                           child: CoustomButton(text: 'next'),
                         ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 70,
                 )
               ],
