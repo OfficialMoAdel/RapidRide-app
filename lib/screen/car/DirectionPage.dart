@@ -82,11 +82,12 @@ class _DirectionPageState extends State<DirectionPage> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
+                        SvgPicture.asset('assets/icon/Frame.svg'),
                         Padding(
-                          padding: const EdgeInsets.symmetric(vertical: 12),
+                          padding: const EdgeInsets.symmetric(vertical: 14),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                            children: [
+                            children: const [
                               Text(
                                 'Trip to Destination',
                                 textAlign: TextAlign.center,
@@ -140,14 +141,14 @@ class _DirectionPageState extends State<DirectionPage> {
                                           'assets/icon/stare.svg',
                                           color: PrimaryColor,
                                         )),
-                                        TextSpan(text: ' 4.5'),
+                                        const TextSpan(text: ' 4.5'),
                                       ],
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 12,
                                   ),
-                                  Text('HSW 4736')
+                                  const Text('HSW 4736')
                                 ],
                               )
                             ],
@@ -191,7 +192,7 @@ class _DirectionPageState extends State<DirectionPage> {
                                   Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    children: [
+                                    children: const [
                                       Text(
                                         'National Grand Park',
                                         style: TextStyle(
@@ -215,7 +216,7 @@ class _DirectionPageState extends State<DirectionPage> {
                                   Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
-                                    children: [
+                                    children: const [
                                       Text(
                                         'Fitness Center',
                                         style: TextStyle(
@@ -239,12 +240,12 @@ class _DirectionPageState extends State<DirectionPage> {
                               ),
                               Column(
                                 children: [
-                                  Text('0 KM'),
+                                  const Text('0 KM'),
                                   SizedBox(
                                     height:
                                         MediaQuery.of(context).size.height / 20,
                                   ),
-                                  Text('20 KM')
+                                  const Text('20 KM')
                                 ],
                               ),
                             ],
@@ -273,7 +274,7 @@ class _DirectionPageState extends State<DirectionPage> {
                                       'assets/icon/Chat.svg',
                                     ),
                                   )),
-                              SizedBox(
+                              const SizedBox(
                                 width: 24,
                               ),
                               Container(

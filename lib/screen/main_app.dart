@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:taxi_app/screen/wallet/Card_Mangement.dart';
 import '../widgets/halper_app.dart';
 import 'bus/main_page_bus.dart';
 import 'car/main_page_car.dart';
@@ -40,6 +41,12 @@ class MainApp extends StatelessWidget {
                 text: 'MicroBus',
                 onTap: () => {
                   // context.push(new MainPageBus())
+                },
+              ),
+              CoustomButton(
+                text: 'Card Mangment',
+                onTap: () => {
+                  {context.push(new CardMangement())}
                 },
               ),
             ],

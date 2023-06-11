@@ -5,13 +5,14 @@ import 'coustom_button.dart';
 import '../constants.dart';
 
 class CustomDialog extends StatelessWidget {
-  final String imagePath, header, massage;
+  final String  header, massage;
+  final String? imagePath;
   final String? buttonText;
   final VoidCallback? onButtonPressed;
 
   const CustomDialog({
     Key? key,
-    required this.imagePath,
+    this.imagePath,
     required this.header,
     required this.massage,
     this.buttonText,
@@ -33,30 +34,36 @@ class CustomDialog extends StatelessWidget {
         ],
       ),
       child: Padding(
-        padding: const EdgeInsets.all(42.0),
+        padding: const EdgeInsets.all(30.0),
         child: Column(
           mainAxisSize: MainAxisSize.min, // To make the card compact
           children: <Widget>[
+            if(imagePath!= null)
             SvgPicture.asset(
-              imagePath,
               height: 100,
+              imagePath!,
               color: PrimaryColor,
             ),
             SizedBox(
               height: 24,
             ),
-            Text(
-              header,
-              style: TextStyle(
-                fontSize: 24.0,
-                fontWeight: FontWeight.w700,
+            Center(
+              child: Text(
+                header,
+                style: TextStyle(
+                  fontSize: 19.0,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
             ),
             SizedBox(height: 24.0),
-            Text(
-              massage,
-              style: TextStyle(
-                fontSize: 14.0,
+            Padding(
+              padding: const EdgeInsets.only(left: 0,right: 0),
+              child: Text(
+                massage,
+                style: TextStyle(
+                  fontSize: 14.0,
+                ),
               ),
             ),
             SizedBox(height: 24.0),

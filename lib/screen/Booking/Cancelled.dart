@@ -30,10 +30,10 @@ class _CancelledState extends State<Cancelled> {
               child: Column(
                 children: [
                   CustomCard(
-                    title: 'Wade Warren',
+                    title: 'Warren Wade',
                     subtitle: 'Honda Mobilio',
                     imageUrl:
-                        'https://www.androidcoding.in/wp-content/uploads/flutter_banner_expandable_listview.png',
+                        'https://images.unsplash.com/photo-1464863979621-258859e62245?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=986&q=80',
                     activeText: 'Cancelled',
                     activeColor: RadColor,
                   ),
@@ -44,7 +44,7 @@ class _CancelledState extends State<Cancelled> {
                     title: 'Wade Warren',
                     subtitle: 'Honda Mobilio',
                     imageUrl:
-                        'https://www.androidcoding.in/wp-content/uploads/flutter_banner_expandable_listview.png',
+                        'https://images.unsplash.com/photo-1507101105822-7472b28e22ac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1773&q=80',
                     activeText: 'Cancelled',
                     activeColor: RadColor,
                   ),

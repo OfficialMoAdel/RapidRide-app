@@ -31,10 +31,10 @@ class _CompletedState extends State<Completed> {
               child: Column(
                 children: [
                   CustomCard(
-                    title: 'Wade Warren',
+                    title: 'Warren Wade',
                     subtitle: 'Honda Mobilio',
                     imageUrl:
-                        'https://www.androidcoding.in/wp-content/uploads/flutter_banner_expandable_listview.png',
+                        'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
                     activeText: 'Completed',
                     activeColor: GraanColor,
                   ),
@@ -45,7 +45,7 @@ class _CompletedState extends State<Completed> {
                     title: 'Wade Warren',
                     subtitle: 'Honda Mobilio',
                     imageUrl:
-                        'https://www.androidcoding.in/wp-content/uploads/flutter_banner_expandable_listview.png',
+                        'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
                     activeText: 'Completed',
                     activeColor: GraanColor,
                   ),

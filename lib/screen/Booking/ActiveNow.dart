@@ -34,20 +34,12 @@ class _ActiveNowState extends State<ActiveNow> {
                     title: 'Wade Warren',
                     subtitle: 'Honda Mobilio',
                     imageUrl:
-                        'https://www.androidcoding.in/wp-content/uploads/flutter_banner_expandable_listview.png',
+                        'https://images.unsplash.com/photo-1521146764736-56c929d59c83?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
                     activeText: 'Active',
                     activeColor: PrimaryColor,
                   ),
                   SizedBox(
                     height: MediaQuery.of(context).size.height / 80,
-                  ),
-                  CustomCard(
-                    title: 'Wade Warren',
-                    subtitle: 'Honda Mobilio',
-                    imageUrl:
-                        'https://www.androidcoding.in/wp-content/uploads/flutter_banner_expandable_listview.png',
-                    activeText: 'Active',
-                    activeColor: PrimaryColor,
                   ),
                 ],
               ),

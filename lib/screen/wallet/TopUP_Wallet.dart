@@ -73,7 +73,9 @@ class TopUpWallet extends StatelessWidget {
                         massage: 'You have successfully top up e-wallet',
                         imagePath: 'assets/image/Group.svg',
                         buttonText: "OK",
-                        onButtonPressed: () {},
+                        onButtonPressed: () {
+                          Navigator.pop(context);
+                        },
                       );
                     });
               },

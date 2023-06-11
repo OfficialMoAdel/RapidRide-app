@@ -37,7 +37,7 @@ class _AddressDirectionPageState extends State<AddressDirectionPage> {
           ),
         ),
         actions: [
-          SizedBox(
+          const SizedBox(
             width: 12,
           ),
           CircleAvatar(
@@ -46,7 +46,7 @@ class _AddressDirectionPageState extends State<AddressDirectionPage> {
               'assets/icon/Search.svg',
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 12,
           ),
           CircleAvatar(
@@ -55,7 +55,7 @@ class _AddressDirectionPageState extends State<AddressDirectionPage> {
               'assets/icon/Notification.svg',
             ),
           ),
-          SizedBox(
+          const SizedBox(
             width: 12,
           ),
           CircleAvatar(
@@ -88,7 +88,7 @@ class _AddressDirectionPageState extends State<AddressDirectionPage> {
           CoustomButton(
               text: "Continue To Order",
               onTap: () => context.push(new carselectscreen())),
-          SizedBox(height: 20),
+          const SizedBox(height: 20),
         ],
       ),
     );

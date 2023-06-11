@@ -101,13 +101,14 @@ class LoginPage extends StatelessWidget {
                   ),
                   CoustomButton(
                     onTap: () async {
-                      final SharedPreferences sharedPreferences =
+                      /*   final SharedPreferences sharedPreferences =
                           await SharedPreferences.getInstance();
                       sharedPreferences.getString('email');
                       if (formkey.currentState!.validate()) {
                         BlocProvider.of<AuthCubit>(context)
                             .loginUser(email: email!, password: password!);
-                      } else {}
+                      } else {} */
+                      context.Replacement(new MainApp());
                     },
                     text: 'Sin in',
                   ),

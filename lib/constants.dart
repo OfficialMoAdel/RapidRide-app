@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 const PrimaryColor = Color(0xFFFEBB1B);
@@ -10,3 +12,14 @@ const KeyMessagesCollactions = 'messages';
 const KMessage = 'message';
 const KCreatedAt = 'ceartedat';
 const KId = 'id';
+const suggestionBaseurl =
+    "https: //maps.googleapis.com/maps/api/place/autocomplete/json";
+const placeLocationBaseUrl =
+    "https: //maps.googleapis.com/maps/api/place/details/json";
+const diractionBaseUrl =
+    "https: //maps.googleapis.com/maps/api/place/diractions/json";
+const googleAPIKey = 'AIzaSyAHQ6IFG6maNOdEDxcrxl1Oo8YZTeap7Hw';
+
+abstract class AppConstants {
+  static var fireBaseBalance = 0;
+}

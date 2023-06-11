@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:taxi_app/cubit/maps/maps_cubit.dart';
+import 'package:taxi_app/repository/maps_repo.dart';
 import 'package:taxi_app/screen/intro_screen/splash_screen.dart';
+import 'package:taxi_app/screen/main_app.dart';
+import 'package:taxi_app/webServices/PlaceWebServices.dart';
 import 'cubit/auth/auth_cubit.dart';
 import 'routes.dart';
+import 'package:firebase_database/firebase_database.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 int? isViewed;
 void main() async {
@@ -12,6 +18,8 @@ void main() async {
   SharedPreferences prefs = await SharedPreferences.getInstance();//
   isViewed = prefs.getInt('IntroPage'); */
   runApp(const MyApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
 }
 
 class MyApp extends StatelessWidget {
@@ -24,6 +32,9 @@ class MyApp extends StatelessWidget {
         providers: [
           BlocProvider(
             create: (context) => AuthCubit(),
+          ),
+          BlocProvider(
+            create: (context) => MapsCubit(MapsRepository(PlacesWebSevices())),
           ),
         ],
         child: MaterialApp(
